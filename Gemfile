@@ -12,6 +12,7 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 gem "middleman", "~> 4.1"
 gem "middleman-blog"
 gem "nokogiri"
+gem 'middleman-gh-pages'
 
 gem 'redcarpet', '~> 3.3', '>= 3.3.3'
 
