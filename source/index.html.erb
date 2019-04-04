@@ -17,7 +17,7 @@ per_page: 10
     <% blog.articles.each do |article| %>
     <article class="relative">
       <h2 class="mt0 mb1 f4 lh-title">
-        <a href="<%= article.url %>" class="link">
+        <a href="/hcde598/<%= article.url %>" class="link">
           <%= article.title %>
         </a>
       </h2>
@@ -29,11 +29,11 @@ per_page: 10
       </div>
       <figure class="ma0">
         <img
-          src="images/<%= article.data.img %>"
+          src="/hcde598/images/<%= article.data.img %>"
           alt="<%= article.title %> project"
         />
       </figure>
-      <a href="<%= article.url %>" class="article-link"></a>
+      <a href="/hcde598/<%= article.url %>" class="article-link"></a>
     </article>
     <% end %>
   </div>
