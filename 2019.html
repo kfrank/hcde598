@@ -8,18 +8,27 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <!-- Use the title from a page's frontmatter if it has one -->
-    <title><%= current_page.data.title || "Klare Frank HCDE 598" %></title>
+    <title>Klare Frank HCDE 598</title>
     <link
       href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:500|Barlow:300,700|Merriweather:300,700"
       rel="stylesheet"
     />
-    <%= stylesheet_link_tag "site" %> <%= javascript_include_tag "site" %>
+    <link href="/stylesheets/site.css" rel="stylesheet" /> <script src="/javascripts/site.js"></script>
   </head>
   <body>
     <header class="pa4">
       <h1><a href="/">Klare Frank</a></h1>
       <h2>HCDE 598 Digital Fabrication</h2>
     </header>
-    <%= yield %>
+    <h1>Archive for
+    2019
+</h1>
+
+
+<ul>
+    <li><a href="/2019/04/04/nameboard.html">Nameboard</a> <span>Apr  4</span></li>
+</ul>
+
+
   </body>
 </html>
