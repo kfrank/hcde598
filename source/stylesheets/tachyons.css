@@ -868,11 +868,17 @@ img {
   float: none;
 }
 .sans-serif {
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+  font-family: "Barlow", -apple-system, BlinkMacSystemFont, avenir next, avenir,
     helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
 }
+.sans-serif-alt {
+  font-family: "Barlow Condensed", -apple-system, BlinkMacSystemFont,
+    avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto,
+    segoe ui, arial, sans-serif;
+  font-weight: 500;
+}
 .serif {
-  font-family: georgia, times, serif;
+  font-family: "Merriweather", georgia, times, serif;
 }
 .system-sans-serif {
   font-family: sans-serif;
