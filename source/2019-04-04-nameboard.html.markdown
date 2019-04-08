@@ -2,7 +2,7 @@
 title: Nameboard
 date: 2019-04-04 03:19 UTC
 tags:
-img: work-treehouse-2.jpg
+img: nameboard.jpg
 ---
 
 For the first assignment, I decided to build a stand for a nametag I received while attending [Greenville Grok](https://greenvillegrok.com/), an unconference for people who create things online. I attended this conference on April 5th & 6th and had to fly across the country to Greenville, SC. This limited the time I was able to spend actually making something and also limited the tools and materials available to me.
