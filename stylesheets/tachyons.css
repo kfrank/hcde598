@@ -878,7 +878,7 @@ img {
   font-weight: 500;
 }
 .serif {
-  font-family: "Merriweather", georgia, times, serif;
+  font-family: "Spectral", georgia, times, serif;
 }
 .system-sans-serif {
   font-family: sans-serif;
@@ -2587,6 +2587,9 @@ code {
 .f-subheadline {
   font-size: 5rem;
 }
+.f0 {
+  font-size: 4rem;
+}
 .f1 {
   font-size: 3rem;
 }
@@ -4155,6 +4158,9 @@ code {
   .f-subheadline-ns {
     font-size: 5rem;
   }
+  .f0-ns {
+    font-size: 4rem;
+  }
   .f1-ns {
     font-size: 3rem;
   }
@@ -5508,6 +5514,9 @@ code {
   .f-subheadline-m {
     font-size: 5rem;
   }
+  .f0-m {
+    font-size: 4rem;
+  }
   .f1-m {
     font-size: 3rem;
   }
@@ -6860,6 +6869,9 @@ code {
   .f-5-l,
   .f-subheadline-l {
     font-size: 5rem;
+  }
+  .f0-l {
+    font-size: 4rem;
   }
   .f1-l {
     font-size: 3rem;

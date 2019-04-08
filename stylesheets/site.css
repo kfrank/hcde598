@@ -1,6 +1,7 @@
 @import url(tachyons.css);
 @import url(tachyons-grid.css);
 body {
+  overflow-x: hidden;
   background-color: #fff;
   color: #333;
   font-weight: 300;
@@ -17,9 +18,6 @@ header h1 {
   header h1 a {
     text-decoration: none; }
 
-header h2 {
-  margin-left: 2rem; }
-
 p {
   font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
   max-width: 40em; }
@@ -30,24 +28,52 @@ a {
   a:focus, a:hover {
     color: #418086; }
 
-.article-link {
-  position: absolute;
-  top: -1rem;
-  left: -1rem;
-  width: calc(100% + 2rem);
-  height: calc(100% + 2rem);
-  overflow: hidden; }
-  .article-link:before {
-    content: "";
+.index-article {
+  position: relative; }
+  .index-article figure {
+    max-width: 300px;
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(179, 74, 0, 0);
-    transform: translateX(-100%);
-    transition: 0.2s ease background, 0.4s ease transform;
-    pointer-events: none; }
-  .article-link:hover:before, .article-link:focus:before {
-    background: rgba(179, 74, 0, 0.05);
-    transform: translateX(0); }
+    opacity: 0;
+    transition: opacity 1s ease;
+    z-index: -1; }
+  .index-article:hover figure {
+    opacity: 1; }
+
+.articles_list {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: center; }
+
+.distort {
+  overflow: hidden;
+  position: absolute;
+  pointer-events: none;
+  will-change: transform; }
+
+.distort__img {
+  opacity: 0; }
+
+.articles {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 2rem;
+  z-index: 999;
+  font-weight: normal; }
+
+.articles a {
+  transition: color 0.5s ease; }
+  .articles a:hover, .articles a:focus {
+    color: #b34a00; }
+
+.article_link {
+  z-index: 999;
+  position: relative;
+  white-space: nowrap; }
+  .article_link span {
+    display: inline-block; }
