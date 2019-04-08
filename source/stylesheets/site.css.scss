@@ -7,6 +7,7 @@ $dark-green: #418086;
 $link: $dark-orange;
 
 body {
+  overflow-x: hidden;
   background-color: #fff;
   color: #333;
   font-weight: 300;
@@ -29,10 +30,6 @@ header {
       text-decoration: none;
     }
   }
-  h2 {
-    margin-left: 2rem;
-    // font-weight: 300;
-  }
 }
 
 p {
@@ -50,30 +47,65 @@ a {
   }
 }
 
-.article-link {
-  position: absolute;
-  top: -1rem;
-  left: -1rem;
-  width: calc(100% + 2rem);
-  height: calc(100% + 2rem);
-  overflow: hidden;
-  &:before {
-    content: "";
+.index-article {
+  position: relative;
+  figure {
+    max-width: 300px;
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba($dark-orange, 0);
-    transform: translateX(-100%);
-    transition: 0.2s ease background, 0.4s ease transform;
-    pointer-events: none;
+    opacity: 0;
+    transition: opacity 1s ease;
+    z-index: -1;
   }
+  &:hover {
+    figure {
+      opacity: 1;
+    }
+  }
+}
+
+.articles_list {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
+}
+
+.distort {
+  overflow: hidden;
+  position: absolute;
+  pointer-events: none;
+  will-change: transform;
+}
+.distort__img {
+  opacity: 0;
+}
+
+.articles {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 2rem;
+  z-index: 999;
+  font-weight: normal;
+}
+
+.articles a {
+  transition: color 0.5s ease;
   &:hover,
   &:focus {
-    &:before {
-      background: rgba($dark-orange, 0.05);
-      transform: translateX(0);
-    }
+    color: $dark-orange;
+  }
+}
+
+.article_link {
+  z-index: 999;
+  position: relative;
+  white-space: nowrap;
+  span {
+    display: inline-block;
   }
 }

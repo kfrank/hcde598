@@ -5,36 +5,79 @@ per_page: 10
 
 <section class="pb4 ph4">
   <p class="lh-copy">
-    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-    ridiculus mus. Maecenas faucibus mollis interdum.
+    A collection of projects completed while taking HCDE 598, Digital
+    Fabrication, during the Spring 2019 quarter at the University of Washington.
   </p>
 </section>
 
-<section class="pv2 ph4">
-  <h1 class="f3 mb4">Projects</h1>
+<div class="articles_list">
+  <svg
+    class="distort"
+    width="350"
+    height="450"
+    viewBox="0 0 350 450"
+    style="transform: translateX(-67px) translateY(-358.5px);"
+  >
+    <filter id="distortionFilter">
+      <feTurbulence
+        type="fractalNoise"
+        baseFrequency="0.01 0.003"
+        numOctaves="5"
+        seed="2"
+        stitchTiles="noStitch"
+        x="0%"
+        y="0%"
+        width="100%"
+        height="100%"
+        result="noise"
+      ></feTurbulence>
+      <feDisplacementMap
+        in="SourceGraphic"
+        in2="noise"
+        scale="3.31451229310109e-13"
+        xChannelSelector="R"
+        yChannelSelector="B"
+        x="0%"
+        y="0%"
+        width="100%"
+        height="100%"
+        filterUnits="userSpaceOnUse"
+      ></feDisplacementMap>
+    </filter>
+    <g filter="url(#distortionFilter)">
+      <% blog.articles.each_with_index do |article, i| %>
+      <image
+        class="distort__img"
+        x="50"
+        y="50"
+        xlink:href="images/<%= article.data.img %>"
+        height="350"
+        width="250"
+        style="opacity: 0;"
+      ></image>
+      <% end %>
+    </g>
+  </svg>
+  <nav class="pv2 ph4 articles">
+    <% blog.articles.each_with_index do |article, i| %>
 
-  <div class="grid grid-columns-3 ga4">
-    <% blog.articles.each do |article| %>
-    <article class="relative">
-      <h2 class="mt0 mb1 f4 lh-title">
-        <a href="/hcde598/<%= article.url %>" class="link">
-          <%= article.title %>
-        </a>
+    <a
+      href="<%= article.url %>"
+      class="article_link link near-black mt0 mb1 f0-ns f2 lh-title serif normal"
+    >
+      <%= i %>. <%= article.title %>
+    </a>
+    <!-- <article class="relative index-article">
+      <h2 class="">
       </h2>
-      <time class="text-fade f5 sans-serif-alt ttu tracked">
-        <%= article.date.strftime('%B %d ') %>
-      </time>
-      <div class="article-intro">
-        <p class="serif lh-copy"><%= article.data.description %></p>
-      </div>
-      <figure class="ma0">
+      <figure class="ma0 mb3">
         <img
-          src="/hcde598/images/<%= article.data.img %>"
+          src="images/<%= article.data.img %>"
           alt="<%= article.title %> project"
         />
       </figure>
-      <a href="/hcde598/<%= article.url %>" class="article-link"></a>
-    </article>
+      <a href="<%= article.url %>" class="article-link"></a>
+    </article> -->
     <% end %>
-  </div>
-</section>
+  </nav>
+</div>
