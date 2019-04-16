@@ -1,6 +1,6 @@
 ---
 title: Laser Cut Kit
-date: 2019-04-16 17:16 UTC
+date: 2019-04-15 17:16 UTC
 tags:
 img: laser-3.jpg
 ---
@@ -57,4 +57,4 @@ Choose your leaves. To acheive optimum plant growth, choose taller leaves for th
 
 ![Cutting out the leaves](/hcde598/images/laser-4.jpg)
 
-[Download the source illustrator files]()
+[Download the source illustrator files](https://github.com/kfrank/hcde598/blob/gh-pages/documentation/laser-cut-kit/planter.ai)
