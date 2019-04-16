@@ -22,6 +22,7 @@ To start, I created a basic shape of the diameter cross-section of a planter and
 To acheive a more solid-looking effect, I rotated the notches on the circle 330° to piece together the vertical shapes at an angle.
 
 ![Vertical cross-section pieces](/hcde598/images/laser-4.gif)
+_Videos and gifs at 4x speed_
 
 I then wanted to make sure that all the pieces were aligned on a z-axis, so I added notches to the top and bottom of the vertical planter-profile pieces and removed every other notch from the stablizing circle.
 
@@ -44,8 +45,6 @@ I assembled four artboards sized to cardboard I had pre-cut from a large Lego bo
 I ran into an issue where the vertical pieces, even though their stroke was set to the smallest setting, was still wanted to be raster cut by the laser cutter instead of vector cut. I had to re-draw this shape using one of the leaves I knew had already laser cut as vector. I set the laser cutter to 25% power 100% speed, which worked enough to properly cut out everything.
 
 ![Cutting out the leaves](/hcde598/images/laser-2.gif)
-
-_Video at 4x speed_
 
 ## Assembling the final plant
 
