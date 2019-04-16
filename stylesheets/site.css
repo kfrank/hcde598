@@ -3,6 +3,7 @@
 body {
   overflow-x: hidden;
   background-color: #fff;
+  background: #fff url(/images/bg.png) repeat;
   color: #333;
   font-weight: 300;
   font-family: "Barlow", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif; }
@@ -73,7 +74,22 @@ a {
 
 .article_link {
   z-index: 999;
+  display: block;
   position: relative;
-  white-space: nowrap; }
+  white-space: nowrap;
+  margin-left: -7rem; }
+  @media screen and (max-width: 30em) {
+    .article_link {
+      margin-left: -3.5rem; } }
   .article_link span {
-    display: inline-block; }
+    display: inline-block;
+    min-width: 1rem; }
+    @media screen and (max-width: 30em) {
+      .article_link span {
+        min-width: 0.5rem; } }
+
+.assignment h1 {
+  font-weight: normal; }
+
+.assignment p + h2 {
+  margin-top: 2.5rem; }
