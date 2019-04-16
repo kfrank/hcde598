@@ -1,0 +1,95 @@
+@import url(tachyons.css);
+@import url(tachyons-grid.css);
+body {
+  overflow-x: hidden;
+  background-color: #fff;
+  background: #fff url(/images/bg.png) repeat;
+  color: #333;
+  font-weight: 300;
+  font-family: "Barlow", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif; }
+
+header h1,
+header h2 {
+  display: inline-block;
+  font-size: 1rem; }
+
+header h1 {
+  text-transform: uppercase;
+  font-weight: 700; }
+  header h1 a {
+    text-decoration: none; }
+
+p {
+  font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+  max-width: 40em; }
+
+a {
+  color: #b34a00;
+  transition: color 0.2s ease; }
+  a:focus, a:hover {
+    color: #418086; }
+
+.index-article {
+  position: relative; }
+  .index-article figure {
+    max-width: 300px;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+    z-index: -1; }
+  .index-article:hover figure {
+    opacity: 1; }
+
+.articles_list {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: center; }
+
+.distort {
+  overflow: hidden;
+  position: absolute;
+  pointer-events: none;
+  will-change: transform; }
+
+.distort__img {
+  opacity: 0; }
+
+.articles {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 2rem;
+  z-index: 999;
+  font-weight: normal; }
+
+.articles a {
+  transition: color 0.5s ease; }
+  .articles a:hover, .articles a:focus {
+    color: #b34a00; }
+
+.article_link {
+  z-index: 999;
+  display: block;
+  position: relative;
+  white-space: nowrap;
+  margin-left: -7rem; }
+  @media screen and (max-width: 30em) {
+    .article_link {
+      margin-left: -3.5rem; } }
+  .article_link span {
+    display: inline-block;
+    min-width: 1rem; }
+    @media screen and (max-width: 30em) {
+      .article_link span {
+        min-width: 0.5rem; } }
+
+.assignment h1 {
+  font-weight: normal; }
+
+.assignment p + h2 {
+  margin-top: 2.5rem; }
