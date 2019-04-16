@@ -48,7 +48,7 @@ per_page: 10
       ></feDisplacementMap>
     </filter>
     <g filter="url(#distortionFilter)">
-      <% blog.articles.each_with_index do |article, i| %>
+      <% blog.articles.reverse.each_with_index do |article, i| %>
       <image
         class="distort__img"
         x="50"
@@ -62,7 +62,7 @@ per_page: 10
     </g>
   </svg>
   <nav class="pv2 ph4 articles">
-    <% blog.articles.each_with_index do |article, i| %>
+    <% blog.articles.reverse.each_with_index do |article, i| %>
 
     <a
       href="<%= article.url %>"
