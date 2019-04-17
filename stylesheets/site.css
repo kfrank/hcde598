@@ -77,10 +77,10 @@ a {
   display: block;
   position: relative;
   white-space: nowrap;
-  margin-left: -7rem; }
+  margin-left: -11rem; }
   @media screen and (max-width: 30em) {
     .article_link {
-      margin-left: -3.5rem; } }
+      margin-left: -5.5rem; } }
   .article_link span {
     display: inline-block;
     min-width: 1rem; }
