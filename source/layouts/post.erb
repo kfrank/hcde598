@@ -1,19 +1,27 @@
 <% wrap_layout :layout do %>
 
-<div id="main" role="main" class="ph4 assignment">
-  <div class="mw7 center">
-    <figure class="mw6 mh0 mv2 mt3">
-      <%= image_tag current_article.data.img, :alt => current_article.title %>
-    </figure>
-    <div class="mw7">
-      <h1 class="mt2 mb0 f0-ns f1 lh-solid serif normal">
-        <%= current_article.title %>
-      </h1>
-      <time datetime="" class="dib mt0 f4-ns f5 mb3 sans-serif fw3"
-        ><%= current_article.date.strftime('%B %d %Y') %></time
-      >
+<div id="main" role="main" class="assignment">
+  <header class="ph4 pv4 pv0-ns mv4 mv0-ns">
+    <div
+      class="flex-m items-center-m justify-between-m flex-l items-center-l justify-between-l mw8 center"
+    >
+      <div class=" z-1 relative header-content">
+        <h1 class="mt2 mb0 f0-ns f1 lh-solid db">
+          <%= current_article.title %>
+        </h1>
+        <time datetime="" class="dib mt0 f4-ns f5 mb3 sans-serif fw3"
+          ><%= current_article.date.strftime('%B %d %Y') %></time
+        >
+      </div>
+      <figure class="mh0 mv2 mt3 z-1 relative">
+        <%= image_tag current_article.data.img, :alt => current_article.title %>
+      </figure>
     </div>
-    <article class="mt4 lh-copy serif">
+    <div class="bg"></div>
+  </header>
+
+  <div class="mw7 center ph4 ">
+    <article class="mt4 lh-copy">
       <div class="mw7">
         <%= yield %>
       </div>
@@ -35,6 +43,7 @@
             href="<%= prev_article.url %>"
             rel="prev"
             title="Previous article: <%= prev_article.title %>"
+            class="sans-serif dib mt1"
           >
             <%= prev_article.title %>
           </a>
@@ -49,6 +58,7 @@
             href="<%= next_article.url %>"
             rel="next"
             title="Next article: <%= next_article.title %>"
+            class="sans-serif dib mt1"
           >
             <%= next_article.title %>
           </a>

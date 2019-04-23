@@ -2,16 +2,16 @@
 title: Parametric Kit
 date: 2019-04-23 02:26 UTC
 tags:
-img: assignment2/IMG_2452.jpg
+img: assignment2/triangles3.gif
 ---
-
-![The fit test](images/assignment2/triangles3.gif)
 
 _It sticks together, yay <i class="em em-smile"></i>_
 
 - [Rhino file](http://klare.io/hcde598/documentation/laser-cut-kit/intersected-triangles-final.3dm)
 - [Illustrator file](http://klare.io/hcde598/documentation/laser-cut-kit/intersected-triangles-final.ai)
 - [Grasshopper source code](http://klare.io/hcde598/documentation/laser-cut-kit/intersected-triangles-final.gh)
+
+![Assembled](images/assignment2/IMG_2452.jpg)
 
 ## Designing the kit
 

@@ -868,8 +868,7 @@ img {
   float: none;
 }
 .sans-serif {
-  font-family: "Barlow", -apple-system, BlinkMacSystemFont, avenir next, avenir,
-    helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  font-family: "Source Code Pro", monospace;
 }
 .sans-serif-alt {
   font-family: "Barlow Condensed", -apple-system, BlinkMacSystemFont,
