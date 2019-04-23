@@ -11,7 +11,7 @@ _It sticks together, yay <i class="em em-smile"></i>_
 - [Illustrator file](http://klare.io/hcde598/documentation/laser-cut-kit/intersected-triangles-final.ai)
 - [Grasshopper source code](http://klare.io/hcde598/documentation/laser-cut-kit/intersected-triangles-final.gh)
 
-![Assembled](images/assignment2/IMG_2452.jpg)
+![Assembled](assignment2/IMG_2452.jpg)
 
 ## Designing the kit
 
@@ -34,15 +34,15 @@ I scrapped that idea and instead created one triangle from a polyline using trig
 
 I created all the bisecting lines in the inner triangle by hand to make them all varied, trimed each inner triangle, and joined the inner (now) polygon lines in Rhino.
 
-![Switching to one shape first](images/assignment2/notches.png)
+![Switching to one shape first](assignment2/notches.png)
 
 I created small connectors that were twice as wide as the notch depth so that two objects could snugly fit next to each other. One side of the connector was set to the plywood thickness and the other to the neon acrylic thickness. I then rotated half of the connector by 15°, 30°, and 45° to create four different options. It's a choose your own cool triangle sculpture adventure!
 
-![Generating the tiny connectors](images/assignment2/notch-generation.png)
+![Generating the tiny connectors](assignment2/notch-generation.png)
 
 I then set the shapes to different layers to allow printing at different settings on different materials. I actually ended up combining the inner polygons and outer triangles to create two sets of shapes so that the acrylic and wood pieces would be different.
 
-![Dividing the shapes into layers for different printing](images/assignment2/layers.png)
+![Dividing the shapes into layers for different printing](assignment2/layers.png)
 
 ### Issues
 
@@ -52,19 +52,19 @@ Even as someone who thinks through problems for programming on a regular basis, 
 
 Using triangulate somehow made things extremely annoying. Generating notches for all the outer triangle sides required calculating the exact angle relative to X and corresponding each angle to an xy plane relative to the midpoint of each triangle edge. I actually _did_ get this to work and generate triangles in the right places, but when I baked everything, I was given about 5x the amount of notches, most on top of one another. This would not have been great to send to a laser cutter, as it would've made passes for each drawn curve. Even debugging by getting the list length of variables at different steps didn't exactly lead to figuring out why I was getting so many notches. I probably spent 2-3 hours just trying to figure this out. It still didn't work when I turned graft off and collapsed the tree, so idk. <i class="em em-woman-shrugging"></i>
 
-![Triangulate notches for all](images/assignment2/notches-for-all.png)
+![Triangulate notches for all](assignment2/notches-for-all.png)
 
 #### <i class="em em-cry"></i> "Random" isn't random at all
 
 In my optimisim, I wanted to use Grasshopper to generate everything in my design, including the bisecting lines for the inner triangles. The only issue was that I wanted this to be unique for every triangle, no matter how many triangles got generated. This is where I re-learned that every "random" function in programming isn't really random; it just chooses from a seemingly random list of numbers, but on each iteration, follows the same pattern. I also ran into this issue when working on my led light strip for Physical Prototyping. The screenshot below got pretty close, but it still wasn't the best. If you look closely, you definitely see a pattern. Also, wtf was up with the very last triangle getting ALL the lines. Not bisecting at all. <i class="em em-woman-gesturing-no"></i>
 
-!["Randomizing" lines for inner triangle cut-outs](images/assignment2/randomize-lines.png)
+!["Randomizing" lines for inner triangle cut-outs](assignment2/randomize-lines.png)
 
 #### <i class="em em-woman-facepalming"></i> Fillet does all corners
 
 I _really_ wanted to fillet the corners where the notches connect to make a smooth and satisfying connection when assembling the kit. Using the standard fillet function ended up filleting _ALL_ the corners, which would've meant a loose connection on the very inside of the notches. No good. I turned to using the other fillet function, which fillets on only one curve and set a Boolean list to specify which ones I wanted filleted. Turns out this creates a new curve for _EVERY_ filleted edge. Also no good. I kind of just gave up on this one, though when I was in the makerspace printing, Andrew informed me that he used a triangle to trim the edges for a custom fillet. This seems like a much better approach to getting a fillet only on the outside, but doesn't still make any sense to me why you can't just modify the fillet function to do what you want. With Andrew's triangle cut-out approach, it did require setting an origin exactly at the midpoint and rotating it the correct degrees, but it worked much better. Since I was printing and spent hours in Grasshopper already, I decided to just print straight connectors, but updated my files to accommodate this fillet.
 
-![Custom Filleting Issue](images/assignment2/custom-filleting-issue.png)
+![Custom Filleting Issue](assignment2/custom-filleting-issue.png)
 
 ## Printing
 
@@ -74,16 +74,16 @@ I set up a test layer with four connector pieces in different colors and then co
 
 I masked the plywood and left the protective film on the acrylic sheets to reduce the burnt haze on the wood. I probably should've masked the clear sheet since it had only a clear protector and should've masked the back of the plywood.
 
-![Laser cutting more triangles](images/assignment2/triangles2.gif)
+![Laser cutting more triangles](assignment2/triangles2.gif)
 _Laser cutting is still very satisfying to watch and way easier than hand sawing through this plywood_
 
-![Triangles](images/assignment2/IMG_2442.JPG)
+![Triangles](assignment2/IMG_2442.JPG)
 _Pieces all piled up in the makerspace after printing_
 
-![Triangles](images/assignment2/IMG_2445.JPG)
+![Triangles](assignment2/IMG_2445.JPG)
 _:D Yay, awesome colors!_
 
-![Little Burnt Notches](images/assignment2/IMG_2438.JPG)
+![Little Burnt Notches](assignment2/IMG_2438.JPG)
 _Should've masked this sheet, oh well, they’re pretty tiny_
 
 ### Settings
