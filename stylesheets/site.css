@@ -6,18 +6,27 @@ body {
   background: #fff url(/images/bg.png) repeat;
   color: #333;
   font-weight: 300;
-  font-family: "Barlow", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif; }
+  font-size: 1.2rem;
+  font-family: "Merriweather", Georgia, "Times New Roman", Times, serif; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Source Code Pro", monospace;
+  font-weight: 900;
+  line-height: 2rem;
+  margin-top: 4rem; }
 
 header h1,
 header h2 {
   display: inline-block;
   font-size: 1rem; }
 
-header h1 {
-  text-transform: uppercase;
-  font-weight: 700; }
-  header h1 a {
-    text-decoration: none; }
+header h1 a {
+  text-decoration: none; }
 
 p {
   font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
@@ -77,10 +86,10 @@ a {
   display: block;
   position: relative;
   white-space: nowrap;
-  margin-left: -11rem; }
+  margin-left: -7rem; }
   @media screen and (max-width: 30em) {
     .article_link {
-      margin-left: -5.5rem; } }
+      margin-left: -3.5rem; } }
   .article_link span {
     display: inline-block;
     min-width: 1rem; }
@@ -88,8 +97,36 @@ a {
       .article_link span {
         min-width: 0.5rem; } }
 
-.assignment h1 {
-  font-weight: normal; }
-
 .assignment p + h2 {
   margin-top: 2.5rem; }
+
+.assignment header {
+  position: relative; }
+  @media screen and (min-width: 30em) {
+    .assignment header {
+      height: 500px;
+      margin-bottom: 5rem; }
+      .assignment header .header-content {
+        margin-top: -4rem; }
+      .assignment header figure {
+        margin-top: 4rem; }
+        .assignment header figure img {
+          max-height: 500px; } }
+  .assignment header .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #00d9d9, #ff449b);
+    opacity: 0.5;
+    animation: huerotator 3s infinite alternate; }
+
+@keyframes huerotator {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+    filter: hue-rotate(0deg); }
+  100% {
+    -webkit-filter: hue-rotate(180deg);
+    filter: hue-rotate(180deg); } }

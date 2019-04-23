@@ -5,16 +5,135 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2019-04-15T23:11:00-07:00</updated>
+  <updated>2019-04-22T19:26:00-07:00</updated>
   <author>
     <name>Blog Author</name>
   </author>
   <entry>
+    <title>Parametric Kit</title>
+    <link rel="alternate" href="http://blog.url.com/2019/04/23/parametric-kit.html"/>
+    <id>http://blog.url.com/2019/04/23/parametric-kit.html</id>
+    <published>2019-04-22T19:26:00-07:00</published>
+    <updated>2019-04-23T10:28:35-07:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;em&gt;It sticks together, yay &lt;i class="em em-smile"&gt;&lt;/i&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="http://klare.io/hcde598/documentation/laser-cut-kit/intersected-triangles-final.3dm"&gt;Rhino file&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://klare.io/hcde598/documentation/laser-cut-kit/intersected-triangles-final.ai"&gt;Illustrator file&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://klare.io/hcde598/documentation/laser-cut-kit/intersected-triangles-final.gh"&gt;Grasshopper source code&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src="/images/assignment2/IMG_2452.jpg" alt="Assembled" /&gt;&lt;/p&gt;
+
+&lt;h2 id="designing-the-kit"&gt;Designing the kit&lt;/h2&gt;
+
+&lt;p&gt;I turned to my own company, CodePen, for inspiration since there tend to be a lot of geometric designs created, even if they're mostly interactive. I thought this one was cool since it had set of solid and outlined triangles intersected at seemingly random degrees. I used this concept to create triangles with random intersections which created cut-outs of various polygons inside a triangle.&lt;/p&gt;
+
+&lt;p&gt;I also had some plywood lying around from previous projects (much more than cardboard), so I used that with a new acrylic sheet to give the kit some color.&lt;/p&gt;
+
+&lt;p class="codepen" data-height="387" data-theme-id="0" data-default-tab="result" data-user="yuanchuan" data-slug-hash="YLyEvb" style="height: 387px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Unicode triangles"&gt;
+  &lt;span&gt;See the Pen &lt;a href="https://codepen.io/yuanchuan/pen/YLyEvb/"&gt;
+  Unicode triangles&lt;/a&gt; by yuanchuan (&lt;a href="https://codepen.io/yuanchuan"&gt;@yuanchuan&lt;/a&gt;)
+  on &lt;a href="https://codepen.io"&gt;CodePen&lt;/a&gt;.&lt;/span&gt;
+&lt;/p&gt;
+&lt;script async="" src="https://static.codepen.io/assets/embed/ei.js"&gt;&lt;/script&gt;
+
+&lt;h2 id="generating-the-shapes-with-grasshopper-in-rhino"&gt;Generating the shapes with Grasshopper in Rhino&lt;/h2&gt;
+
+&lt;p&gt;My first attempt at this was to use triangulate to generate a grid of triangles and then use the first triangle's three points to calculate an inner triangle which were duplicated in a rectangular array. While this strategy did work and allowed me to keep the size relative for both triangles, it proved stressful when trying to generate notch connectors for every side of the larger triangle. (See details in the issues section below).&lt;/p&gt;
+
+&lt;p&gt;I scrapped that idea and instead created one triangle from a polyline using trigonometry to make it perfectly equilateral. From there, I created notches with a slider to change the width corresponding to material thickness and polar arrayed the rectangular notches around the center of the triangle. I then used arrays to duplicate the triangles into a controlled grid set up to match my material size (12" x 12").&lt;/p&gt;
+
+&lt;p&gt;I created all the bisecting lines in the inner triangle by hand to make them all varied, trimed each inner triangle, and joined the inner (now) polygon lines in Rhino.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/assignment2/notches.png" alt="Switching to one shape first" /&gt;&lt;/p&gt;
+
+&lt;p&gt;I created small connectors that were twice as wide as the notch depth so that two objects could snugly fit next to each other. One side of the connector was set to the plywood thickness and the other to the neon acrylic thickness. I then rotated half of the connector by 15°, 30°, and 45° to create four different options. It's a choose your own cool triangle sculpture adventure!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/assignment2/notch-generation.png" alt="Generating the tiny connectors" /&gt;&lt;/p&gt;
+
+&lt;p&gt;I then set the shapes to different layers to allow printing at different settings on different materials. I actually ended up combining the inner polygons and outer triangles to create two sets of shapes so that the acrylic and wood pieces would be different.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/assignment2/layers.png" alt="Dividing the shapes into layers for different printing" /&gt;&lt;/p&gt;
+
+&lt;h3 id="issues"&gt;Issues&lt;/h3&gt;
+
+&lt;p&gt;Even as someone who thinks through problems for programming on a regular basis, there were things Grasshopper did that were highly annoying and I would’ve saved hours of my life just doing them in illustrator. I did countless hours of Googling and searching through the Grasshopper forums, like in real life as a developer but 10x worse.&lt;/p&gt;
+
+&lt;h4 id="i-classem-em-upsidedownfacei-triangulate-is-annoying"&gt;&lt;i class="em em-upside_down_face"&gt;&lt;/i&gt; Triangulate is annoying&lt;/h4&gt;
+
+&lt;p&gt;Using triangulate somehow made things extremely annoying. Generating notches for all the outer triangle sides required calculating the exact angle relative to X and corresponding each angle to an xy plane relative to the midpoint of each triangle edge. I actually &lt;em&gt;did&lt;/em&gt; get this to work and generate triangles in the right places, but when I baked everything, I was given about 5x the amount of notches, most on top of one another. This would not have been great to send to a laser cutter, as it would've made passes for each drawn curve. Even debugging by getting the list length of variables at different steps didn't exactly lead to figuring out why I was getting so many notches. I probably spent 2-3 hours just trying to figure this out. It still didn't work when I turned graft off and collapsed the tree, so idk. &lt;i class="em em-woman-shrugging"&gt;&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/assignment2/notches-for-all.png" alt="Triangulate notches for all" /&gt;&lt;/p&gt;
+
+&lt;h4 id="i-classem-em-cryi-random-isnt-random-at-all"&gt;&lt;i class="em em-cry"&gt;&lt;/i&gt; "Random" isn't random at all&lt;/h4&gt;
+
+&lt;p&gt;In my optimisim, I wanted to use Grasshopper to generate everything in my design, including the bisecting lines for the inner triangles. The only issue was that I wanted this to be unique for every triangle, no matter how many triangles got generated. This is where I re-learned that every "random" function in programming isn't really random; it just chooses from a seemingly random list of numbers, but on each iteration, follows the same pattern. I also ran into this issue when working on my led light strip for Physical Prototyping. The screenshot below got pretty close, but it still wasn't the best. If you look closely, you definitely see a pattern. Also, wtf was up with the very last triangle getting ALL the lines. Not bisecting at all. &lt;i class="em em-woman-gesturing-no"&gt;&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/assignment2/randomize-lines.png" alt="&amp;quot;Randomizing&amp;quot; lines for inner triangle cut-outs" /&gt;&lt;/p&gt;
+
+&lt;h4 id="i-classem-em-woman-facepalmingi-fillet-does-all-corners"&gt;&lt;i class="em em-woman-facepalming"&gt;&lt;/i&gt; Fillet does all corners&lt;/h4&gt;
+
+&lt;p&gt;I &lt;em&gt;really&lt;/em&gt; wanted to fillet the corners where the notches connect to make a smooth and satisfying connection when assembling the kit. Using the standard fillet function ended up filleting &lt;em&gt;ALL&lt;/em&gt; the corners, which would've meant a loose connection on the very inside of the notches. No good. I turned to using the other fillet function, which fillets on only one curve and set a Boolean list to specify which ones I wanted filleted. Turns out this creates a new curve for &lt;em&gt;EVERY&lt;/em&gt; filleted edge. Also no good. I kind of just gave up on this one, though when I was in the makerspace printing, Andrew informed me that he used a triangle to trim the edges for a custom fillet. This seems like a much better approach to getting a fillet only on the outside, but doesn't still make any sense to me why you can't just modify the fillet function to do what you want. With Andrew's triangle cut-out approach, it did require setting an origin exactly at the midpoint and rotating it the correct degrees, but it worked much better. Since I was printing and spent hours in Grasshopper already, I decided to just print straight connectors, but updated my files to accommodate this fillet.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/assignment2/custom-filleting-issue.png" alt="Custom Filleting Issue" /&gt;&lt;/p&gt;
+
+&lt;h2 id="printing"&gt;Printing&lt;/h2&gt;
+
+&lt;p&gt;I had set up my units in Rhino to be in inches to match everything else and checked the 1 to 1 matching on the export box, so I didn't run into any sizing issues like my classmates who were in the Mill at the same time as me. They didn't seem to have an issue once they set everything to inches as well. I actually exported everything to Illustrator so I could be damn sure it would print at the correct size.&lt;/p&gt;
+
+&lt;p&gt;I set up a test layer with four connector pieces in different colors and then color mapped them to a range of values to find the best setting for each material. This also allowed me to test the connection between materials. I found it to be a bit loose at first and reduced the size of the notch rectanges by 0.05 inches for each side.&lt;/p&gt;
+
+&lt;p&gt;I masked the plywood and left the protective film on the acrylic sheets to reduce the burnt haze on the wood. I probably should've masked the clear sheet since it had only a clear protector and should've masked the back of the plywood.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/assignment2/triangles2.gif" alt="Laser cutting more triangles" /&gt;
+&lt;em&gt;Laser cutting is still very satisfying to watch and way easier than hand sawing through this plywood&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/assignment2/IMG_2442.JPG" alt="Triangles" /&gt;
+&lt;em&gt;Pieces all piled up in the makerspace after printing&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/assignment2/IMG_2445.JPG" alt="Triangles" /&gt;
+&lt;em&gt;:D Yay, awesome colors!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/assignment2/IMG_2438.JPG" alt="Little Burnt Notches" /&gt;
+&lt;em&gt;Should've masked this sheet, oh well, they’re pretty tiny&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id="settings"&gt;Settings&lt;/h3&gt;
+
+&lt;p&gt;The final settings I used to print my materials.&lt;/p&gt;
+
+&lt;h4 id="clear--neon-acrylic"&gt;Clear &amp;amp; Neon Acrylic&lt;/h4&gt;
+
+&lt;p&gt;.06" Thick &amp;amp; .118" Thick&lt;/p&gt;
+
+&lt;p&gt;Speed: 14, Power: 100, Frequency: 50&lt;/p&gt;
+
+&lt;p&gt;I tested both acrylic sheets since their thickness varied, but found the same setting to be good for both. This setting had a very satisfying "snap out" quality on the neon acrylic, which also ensured the pieces didn't all fall below the laser cutter’s grid.&lt;/p&gt;
+
+&lt;h4 id="plywood"&gt;Plywood&lt;/h4&gt;
+
+&lt;p&gt;0.196" Thick&lt;/p&gt;
+
+&lt;p&gt;Speed: 10, Power: 100, Frequency: 50&lt;/p&gt;
+
+&lt;h2 id="future-considerations"&gt;Future Considerations&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Trimming overlapping triangle lines to reduce duplicate cuts&lt;/li&gt;
+  &lt;li&gt;Masking the clear acrylic&lt;/li&gt;
+  &lt;li&gt;Not spending so many damn hours in Grasshopper trying to get it to generate everything.&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+  </entry>
+  <entry>
     <title>Laser Cut Kit</title>
-    <link rel="alternate" href="http://blog.url.com/hcde598/2019/04/16/laser-cut-kit.html"/>
-    <id>http://blog.url.com/hcde598/2019/04/16/laser-cut-kit.html</id>
+    <link rel="alternate" href="http://blog.url.com/2019/04/16/laser-cut-kit.html"/>
+    <id>http://blog.url.com/2019/04/16/laser-cut-kit.html</id>
     <published>2019-04-15T23:11:00-07:00</published>
-    <updated>2019-04-15T23:15:41-07:00</updated>
+    <updated>2019-04-22T19:29:04-07:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -22,62 +141,74 @@
 
 &lt;p&gt;Want to get in on the house plant trend but kill even a snake plant? Why not laser cut one? Guaranteed never to die since it’s made out of cardboard. You’ll never run the risk of forgetting to water it!&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;(Just don’t water it. Cardboard is not a living thing.)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(Just don’t water it. Cardboard is not a living thing and doesn’t need water for nutrients.)&lt;/em&gt;&lt;/p&gt;
 
-&lt;h2 id="building-the-planter"&gt;Building the planter&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://klare.io/hcde598/documentation/laser-cut-kit/planter.ai"&gt;Download the source illustrator files&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;I wanted a planter shape that turned 2D cardboard into a 3D cylindrical shape. At first, I thought about creating a grid with angled notches to fit squares into a cylinder. This &lt;em&gt;may&lt;/em&gt; have worked, but seemed rather flimsy. I instead thought about turning vertical shapes on an angle to achieve the effect of a planter instead.&lt;/p&gt;
+&lt;h2 id="designing-the-planter"&gt;Designing the planter&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src="/hcde598/hcde598/images/laser-1.jpg" alt="Vertical cross-section pieces" /&gt;&lt;/p&gt;
+&lt;p&gt;I wanted a planter shape that turned 2D cardboard into a 3D cylindrical shape since it's more of a challenge than changing 2D objects, like cardboard, into a cube with 90° angles. To start, I browsed planters on CB2 for inspiration. At first, I thought about creating a grid with angled notches to fit squares into a cylinder, like in the below image. This &lt;em&gt;may&lt;/em&gt; have worked, but seemed like it would be tricky to make solid and would've required a lot of angle calculations and physical testing. Cool concept, but not feasible for me given the time frame for this project.&lt;/p&gt;
 
-&lt;p&gt;To start, I created a basic shape of the diameter cross-section of a planter and accompanied it with two circles with notches to fit all of the vertical shapes together.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/assignment1/cb2-planter.png" alt="Two ombre planters with square design" /&gt;
+&lt;em&gt;&lt;a href="https://www.cb2.com/pescador-ombre-planters/f19685"&gt;Pescador Ombre Planters on CB2&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;To acheive a more solid-looking effect, I rotated the notches on the circle 330° to piece together the vertical shapes at an angle.&lt;/p&gt;
+&lt;p&gt;Instead, I turned to thinking about using vertical pieces taking a cross-section of the radius of a planter. By placing these on an angle these pieces could visually cover the shape of a planter, retain the integrity of a cylindrical planter shape, and not require lots of intricate connects thus making the structure much more solid. I designed the planter with twelve pieces to fit on 30° intervals around planter circumference.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="/hcde598/hcde598/images/laser-4.gif" alt="Vertical cross-section pieces" /&gt;
+&lt;p&gt;&lt;img src="/images/assignment1/laser-1.jpg" alt="Vertical cross-section pieces" /&gt;&lt;/p&gt;
+
+&lt;p&gt;To fit the vertical cross-section pieces together, I designed the planter with two circles 7" wide in diameter to place at the top and bottom of the vertical pieces. These act as the top and bottom of the planter.&lt;/p&gt;
+
+&lt;p&gt;To achieve a more solid-looking visual effect, I aligned two notches which were 1/2 inch deep and 0.17 wide (to match the thickness of the cardboard I used) to the top and bottom of the circle. I then rotated these notches 340° and aligned the outward corner of the notch closest to the circle with the edge of the circle. I repeated this step for the remaining 10 notches, placed 30° apart to match the 12 vertical pieces.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/assignment1/laser-4.gif" alt="Adding the notches for the circles" /&gt;
 &lt;em&gt;Videos and gifs at 4x speed&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;I then wanted to make sure that all the pieces were aligned on a z-axis, so I added notches to the top and bottom of the vertical planter-profile pieces and removed every other notch from the stablizing circle.&lt;/p&gt;
+&lt;p&gt;I then wanted to make sure that all the pieces were aligned on a z-axis in anticipation of these circular pieces not being completely level by user construction only. I added 1/2 inch deep by 0.17 wide notches to the top and bottom of the vertical planter-profile pieces to align with the notches on the top and bottom circular pieces. When these two notches get locked in place together, the circular pieces should stay level.&lt;/p&gt;
 
 &lt;h2 id="building-the-plant"&gt;Building the plant&lt;/h2&gt;
 
-&lt;p&gt;I created 10 different leaf varieties to mimic the shape of snake plant leaves. These are tall and the visual effect can roughly be acheived in a 2D plane, which is why they were chosen.&lt;/p&gt;
+&lt;p&gt;To create something nice to sit in the planter, I turned to snake plants. These are tall and the visual effect of their leaves can roughly be achieved in a 2D plane, which is why they were chosen. I created 10 different leaf varieties to mimic the shape of snake plant leaves and increased the height of the leaves incrementally by a 1/2 inch for each leaf from 2" all the way up to 8".&lt;/p&gt;
 
-&lt;p&gt;I added a long "popsicle stick" at the bottom of the leaf to act as a root through the top circle and through the pot. To stablize this further, I added a third circle and adjusted a third the vertical pieces to move the notch down the center as well as the notches in the circle to remove every third instead of every other. This gives each of the leaf "roots" something to sit on like a nice bed of dirt.&lt;/p&gt;
+&lt;p&gt;I then added a long "popsicle stick" at the bottom of the leaf to act as a root through the top circle and through the pot. To stabilize this further, I added a third circle and adjusted the vertical pieces to add an additional identical notch 2" below the top notch. This gives each of the leaf "roots" something to sit in like a nice bed of dirt.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="/hcde598/hcde598/images/laser-5.gif" alt="Vertical cross-section pieces" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/assignment1/laser-5.gif" alt="Making the leaves in illustrator with paths" /&gt;&lt;/p&gt;
 
-&lt;p&gt;I then choose one circle to act as the top of the plant and drew rectangular cut-outs in a spiral pattern to mimic plant growth. These will be where the popsicle sticks go.&lt;/p&gt;
+&lt;p&gt;I then choose one circle to act as the top of the plant and drew rectangular cut-outs in a spiral pattern to mimic natural plant growth. These were by .625" by .17" wide (the magic cardboard thickness number). These will be where the popsicle sticks part of the leaves will drop into the planter.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/assignment1/illustrator-spiral.jpg" alt="Using the illustrator spiral tool as a guide for notches" /&gt;&lt;/p&gt;
 
 &lt;h2 id="laser-cutting-everything"&gt;Laser cutting everything&lt;/h2&gt;
 
-&lt;p&gt;I assembled four artboards sized to cardboard I had pre-cut from a large Lego box and laid out each object to fit.&lt;/p&gt;
+&lt;p&gt;I assembled four artboards sized to cardboard I had pre-sized from a large Lego box and laid out each object to fit. I set the laser cutter to 25% power 100% speed and each object to a stroke width of .001pt. This worked well enough to properly cut out everything, though there was some funky smelling carboard smoke (which you can see in the gifs).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="/hcde598/hcde598/images/laser-1.gif" alt="Cutting out the planter circles" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/assignment1/laser-1.gif" alt="Cutting out the planter circles" /&gt;
+&lt;em&gt;Cutting one of the artboards with the circular pieces&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;I ran into an issue where the vertical pieces, even though their stroke was set to the smallest setting, was still wanted to be raster cut by the laser cutter instead of vector cut. I had to re-draw this shape using one of the leaves I knew had already laser cut as vector. I set the laser cutter to 25% power 100% speed, which worked enough to properly cut out everything.&lt;/p&gt;
+&lt;p&gt;I ran into an issue where the vertical pieces, even though the stroke was set to the smallest setting, still wanted to be raster cut by the laser cutter instead of vector cut. I had to re-draw this shape using one of the leaves I knew had already laser cut as vector.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="/hcde598/hcde598/images/laser-2.gif" alt="Cutting out the leaves" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/assignment1/laser-2.gif" alt="Cutting out the leaves" /&gt;&lt;/p&gt;
+
+&lt;h2 id="modifications"&gt;Modifications&lt;/h2&gt;
+
+&lt;p&gt;I originally designed each vertical piece with only one notch and removed every third notch from the circular pieces to fit the two together (which you can see in the laser cutting gifs). While this worked to solidly piece the two types of pieces together, it did not strictly adhere to the assignment criteria. Instead, I went back and editing all the vertical pieces to have all three notches, this time half as wide and also edited the circles to have notches half as wide at every 30°. This technique still allows a solid connection between the two types while adhering to the criteria of having 12 instances of one unique part (in this case, the 12 vertical planter-profile pieces). This is reflected in the &lt;a href="http://klare.io/hcde598/documentation/laser-cut-kit/planter.ai"&gt;source illustrator file&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id="assembling-the-final-plant"&gt;Assembling the final plant&lt;/h2&gt;
 
-&lt;p&gt;To assemble the plant, first put together the planter. Take one vertical profile piece and slide it into the slots on the three circles with the circle with rectangular cut-outs at the top. Do the same on the opposite side. Then, fill in with vertical pieces around all sides of the circles.&lt;/p&gt;
+&lt;p&gt;To assemble the plant, first, put together the planter. Take one vertical profile piece and slide it into the slots on the three circles with the circle with rectangular cut-outs at the top. Do the same on the opposite side. Then, fill in with vertical pieces around all sides of the circles.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="/hcde598/hcde598/images/laser-2.jpg" alt="Cutting out the leaves" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/assignment1/laser-2.jpg" alt="Putting together the planter" /&gt;&lt;/p&gt;
 
-&lt;p&gt;Choose your leaves. To acheive optimum plant growth, choose taller leaves for the center and smaller leaves on the outside.&lt;/p&gt;
+&lt;p&gt;Choose your leaves. To achieve optimum plant growth, choose taller leaves for the center and smaller leaves on the outside. Place next to a real snake plant to keep it company.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="/hcde598/hcde598/images/laser-4.jpg" alt="Cutting out the leaves" /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://github.com/kfrank/hcde598/blob/gh-pages/documentation/laser-cut-kit/planter.ai"&gt;Download the source illustrator files&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/assignment1/laser-4.jpg" alt="Top down view of the leaves" /&gt;&lt;/p&gt;
 </content>
   </entry>
   <entry>
     <title>Nameboard</title>
-    <link rel="alternate" href="http://blog.url.com/hcde598/2019/04/04/nameboard.html"/>
-    <id>http://blog.url.com/hcde598/2019/04/04/nameboard.html</id>
+    <link rel="alternate" href="http://blog.url.com/2019/04/04/nameboard.html"/>
+    <id>http://blog.url.com/2019/04/04/nameboard.html</id>
     <published>2019-04-03T20:19:00-07:00</published>
-    <updated>2019-04-15T23:15:41-07:00</updated>
+    <updated>2019-04-22T19:28:26-07:00</updated>
     <author>
       <name>Article Author</name>
     </author>
