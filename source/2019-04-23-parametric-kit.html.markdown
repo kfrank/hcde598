@@ -115,7 +115,7 @@ I baked both the triangles into Rhino and created the bisecting lines by hand to
 
 I then set the shapes to different layers to allow printing at different settings on different materials. I actually ended up combining the inner polygons and outer triangles to create two sets of shapes so that the acrylic and wood pieces would be different.
 
-![Dividing the shapes into layers for different printing](assignment2/layers.png)
+![Dividing the shapes into layers for different printing](assignment2/setting-layers.png)
 
 ## Printing
 
