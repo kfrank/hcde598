@@ -109,7 +109,7 @@ To join the left angled side and the right non-angled side, I first separated al
 
 I baked both the triangles into Rhino and created the bisecting lines by hand to make sure they were all truly unique for each set of triangles. I used a line and checked 'On curve' to make sure it would snap to each inner triangle. I then used trim to select which half I wanted to delete. I then joined all the (now) inner polygon curves.
 
-![Inner polygons](assignment2/polygons.png)
+![Inner polygons](assignment2/bisecting.png)
 
 #### 7. Setting the shapes up for printing
 
