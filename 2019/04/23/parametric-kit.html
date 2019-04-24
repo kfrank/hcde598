@@ -53,16 +53,16 @@
         <p><em>It sticks together, yay <i class="em em-smile"></i></em></p>
 
 <ul>
-  <li><a href="http://klare.io/hcde598/documentation/laser-cut-kit/intersected-triangles-final.3dm">Rhino file</a></li>
-  <li><a href="http://klare.io/hcde598/documentation/laser-cut-kit/intersected-triangles-final.ai">Illustrator file</a></li>
-  <li><a href="http://klare.io/hcde598/documentation/laser-cut-kit/intersected-triangles-final.gh">Grasshopper source code</a></li>
+  <li><a href="http://klare.io/hcde598/documentation/rhino-grasshopper/cutout-triangles-kit.3dm">Rhino file</a></li>
+  <li><a href="http://klare.io/hcde598/documentation/rhino-grasshopper/cutout-triangles-kit.ai">Illustrator file</a></li>
+  <li><a href="http://klare.io/hcde598/documentation/rhino-grasshopper/cutout-triangles-kit.gh">Grasshopper source code</a></li>
 </ul>
 
 <p><img src="/hcde598/images/assignment2/IMG_2452.jpg" alt="Assembled" /></p>
 
 <h2 id="designing-the-kit">Designing the kit</h2>
 
-<p>I turned to my own company, CodePen, for inspiration since there tend to be a lot of geometric designs created, even if they're mostly interactive. I thought this one was cool since it had set of solid and outlined triangles intersected at seemingly random degrees. I used this concept to create triangles with random intersections which created cut-outs of various polygons inside a triangle.</p>
+<p>I turned to my own company, CodePen, for inspiration since there tend to be a lot of geometric designs created, even if they're mostly interactive. I thought this one was cool since it had sets of solid and outlined triangles intersected at seemingly random degrees. I used this concept to create triangles with random intersections which created cut-outs of various polygons inside a triangle.</p>
 
 <p>I also had some plywood lying around from previous projects (much more than cardboard), so I used that with a new acrylic sheet to give the kit some color.</p>
 
@@ -75,49 +75,100 @@
 
 <h2 id="generating-the-shapes-with-grasshopper-in-rhino">Generating the shapes with Grasshopper in Rhino</h2>
 
-<p>My first attempt at this was to use triangulate to generate a grid of triangles and then use the first triangle's three points to calculate an inner triangle which were duplicated in a rectangular array. While this strategy did work and allowed me to keep the size relative for both triangles, it proved stressful when trying to generate notch connectors for every side of the larger triangle. (See details in the issues section below).</p>
+<p>My first attempt at this was to use triangulate to generate a grid of triangles and then use the first triangle's three points to calculate an inner triangle which was duplicated in a rectangular array. While this strategy did work and allowed me to keep the size relative for both triangles, it proved stressful when trying to generate notch connectors for every side of the larger triangle. (See details in the issues section below).</p>
 
-<p>I scrapped that idea and instead created one triangle from a polyline using trigonometry to make it perfectly equilateral. From there, I created notches with a slider to change the width corresponding to material thickness and polar arrayed the rectangular notches around the center of the triangle. I then used arrays to duplicate the triangles into a controlled grid set up to match my material size (12" x 12").</p>
+<p>I scrapped that idea and instead tried to approach this by creating one triangle from a polyline using trigonometry to make it perfectly equilateral. From there, I created notches with a slider to change the width corresponding to material thickness and polar arrayed the rectangular notches around the center of the triangle. I then used arrays to duplicate the triangles into a controlled grid set up to match my material size (12" x 12").</p>
 
-<p>I created all the bisecting lines in the inner triangle by hand to make them all varied, trimed each inner triangle, and joined the inner (now) polygon lines in Rhino.</p>
-
-<p><img src="/hcde598/images/assignment2/notches.png" alt="Switching to one shape first" /></p>
-
-<p>I created small connectors that were twice as wide as the notch depth so that two objects could snugly fit next to each other. One side of the connector was set to the plywood thickness and the other to the neon acrylic thickness. I then rotated half of the connector by 15°, 30°, and 45° to create four different options. It's a choose your own cool triangle sculpture adventure!</p>
-
-<p><img src="/hcde598/images/assignment2/notch-generation.png" alt="Generating the tiny connectors" /></p>
-
-<p>I then set the shapes to different layers to allow printing at different settings on different materials. I actually ended up combining the inner polygons and outer triangles to create two sets of shapes so that the acrylic and wood pieces would be different.</p>
-
-<p><img src="/hcde598/images/assignment2/layers.png" alt="Dividing the shapes into layers for different printing" /></p>
+<p>This strategy worked much better for actually giving me shapes I could then manipulate and print from, but it still had a ton of issues.</p>
 
 <h3 id="issues">Issues</h3>
 
 <p>Even as someone who thinks through problems for programming on a regular basis, there were things Grasshopper did that were highly annoying and I would’ve saved hours of my life just doing them in illustrator. I did countless hours of Googling and searching through the Grasshopper forums, like in real life as a developer but 10x worse.</p>
 
+<p><img src="/hcde598/images/assignment2/2zcjhn.jpg" alt="Confused Meme" /></p>
+
 <h4 id="i-classem-em-upsidedownfacei-triangulate-is-annoying"><i class="em em-upside_down_face"></i> Triangulate is annoying</h4>
 
-<p>Using triangulate somehow made things extremely annoying. Generating notches for all the outer triangle sides required calculating the exact angle relative to X and corresponding each angle to an xy plane relative to the midpoint of each triangle edge. I actually <em>did</em> get this to work and generate triangles in the right places, but when I baked everything, I was given about 5x the amount of notches, most on top of one another. This would not have been great to send to a laser cutter, as it would've made passes for each drawn curve. Even debugging by getting the list length of variables at different steps didn't exactly lead to figuring out why I was getting so many notches. I probably spent 2-3 hours just trying to figure this out. It still didn't work when I turned graft off and collapsed the tree, so idk. <i class="em em-woman-shrugging"></i></p>
+<p>Using triangulate somehow made things extremely annoying. Generating notches for all the outer triangle sides required calculating the exact angle relative to X and corresponding each angle to a xy plane relative to the midpoint of each triangle edge. I actually <em>did</em> get this to work and generate triangles in the right places, but when I baked everything, I was given about 5x the amount of notches, most on top of one another. This would not have been great to send to a laser cutter, as it would've made passes for each drawn curve. Even debugging by getting the list length of variables at different steps didn't exactly lead to figuring out why I was getting so many notches. I probably spent 2-3 hours just trying to figure this out. It still didn't work when I turned graft off and collapsed the tree, so idk. <i class="em em-woman-shrugging"></i></p>
 
 <p><img src="/hcde598/images/assignment2/notches-for-all.png" alt="Triangulate notches for all" /></p>
 
 <h4 id="i-classem-em-cryi-random-isnt-random-at-all"><i class="em em-cry"></i> "Random" isn't random at all</h4>
 
-<p>In my optimisim, I wanted to use Grasshopper to generate everything in my design, including the bisecting lines for the inner triangles. The only issue was that I wanted this to be unique for every triangle, no matter how many triangles got generated. This is where I re-learned that every "random" function in programming isn't really random; it just chooses from a seemingly random list of numbers, but on each iteration, follows the same pattern. I also ran into this issue when working on my led light strip for Physical Prototyping. The screenshot below got pretty close, but it still wasn't the best. If you look closely, you definitely see a pattern. Also, wtf was up with the very last triangle getting ALL the lines. Not bisecting at all. <i class="em em-woman-gesturing-no"></i></p>
+<p>In my optimism, I wanted to use Grasshopper to generate everything in my design, including the bisecting lines for the inner triangles. The only issue was that I wanted this to be unique for every triangle, no matter how many triangles got generated. This is where I re-learned that every "random" function in programming isn't really random; it just chooses from a seemingly random list of numbers, but on each iteration, follows the same pattern. I also ran into this issue when working on my led light strip for Physical Prototyping. The screenshot below got pretty close, but it still wasn't the best. If you look closely, you definitely see a pattern. Also, wtf was up with the very last triangle getting ALL the lines. Not bisecting at all. <i class="em em-woman-gesturing-no"></i></p>
 
 <p><img src="/hcde598/images/assignment2/randomize-lines.png" alt="&quot;Randomizing&quot; lines for inner triangle cut-outs" /></p>
 
 <h4 id="i-classem-em-woman-facepalmingi-fillet-does-all-corners"><i class="em em-woman-facepalming"></i> Fillet does all corners</h4>
 
-<p>I <em>really</em> wanted to fillet the corners where the notches connect to make a smooth and satisfying connection when assembling the kit. Using the standard fillet function ended up filleting <em>ALL</em> the corners, which would've meant a loose connection on the very inside of the notches. No good. I turned to using the other fillet function, which fillets on only one curve and set a Boolean list to specify which ones I wanted filleted. Turns out this creates a new curve for <em>EVERY</em> filleted edge. Also no good. I kind of just gave up on this one, though when I was in the makerspace printing, Andrew informed me that he used a triangle to trim the edges for a custom fillet. This seems like a much better approach to getting a fillet only on the outside, but doesn't still make any sense to me why you can't just modify the fillet function to do what you want. With Andrew's triangle cut-out approach, it did require setting an origin exactly at the midpoint and rotating it the correct degrees, but it worked much better. Since I was printing and spent hours in Grasshopper already, I decided to just print straight connectors, but updated my files to accommodate this fillet.</p>
+<p>I <em>really</em> wanted to fillet the corners where the notches connect to make a smooth and satisfying connection when assembling the kit. Using the standard fillet function ended up filleting <em>ALL</em> the corners, which would've meant a loose connection on the very inside of the notches. No good. I turned to using the other fillet function, which fillets on only one curve and set a Boolean list to specify which ones I wanted filleted. Turns out this creates a new curve for <em>EVERY</em> filleted edge. Also no good.</p>
+
+<p>I kind of just gave up on this one, though when I was in the makerspace printing, Andrew informed me that he used a triangle to trim the edges for a custom fillet. This seems like a much better approach to getting a fillet only on the outside, but doesn't still make any sense to me why you can't just modify the fillet function to do what you want. With Andrew's triangle cut-out approach, it did require setting an origin exactly at the midpoint and rotating it the correct degrees, but it worked much better. Since I was printing and spent hours in Grasshopper already, I decided to just cut fillets for the connectors in Illustrator.</p>
 
 <p><img src="/hcde598/images/assignment2/custom-filleting-issue.png" alt="Custom Filleting Issue" /></p>
+
+<h3 id="grasshopper-take-two">Grasshopper take two</h3>
+
+<p>From experiencing all these issues, I <em>really</em> wanted to try to solve generating most everything parametrically in Grasshopper. I think my past failures were not fully understanding when to graft/simplify/flatten trees. When I redid everything with all my new knowledge from past failures, I had a much better time.</p>
+
+<p><img src="/hcde598/images/assignment2/everything.png" alt="Triangle grid" />
+<em>Yay, it all works much better not doing this at 1am.</em></p>
+
+<h4 id="create-a-triangular-grid">1. Create a triangular grid</h4>
+
+<p>First, I found the center of each triangle by separating the edges, finding the endpoints of each line, and using one side of the endpoint to calculate the center of each triangle. I set also inputs for each material thickness (I had three).</p>
+
+<p><img src="/hcde598/images/assignment2/inputs.png" alt="Triangle grid" /></p>
+
+<h4 id="scale-the-triangles-in-the-grid-to-create-inner-triangles">2. Scale the triangles in the grid to create inner triangles</h4>
+
+<p>I used the grid as the base geometry, and then set the center using the above calculation to scale triangles down in size, creating inner triangles.</p>
+
+<p><img src="/hcde598/images/assignment2/triangular.png" alt="Triangle grid scale" /></p>
+
+<h4 id="make-notches-for-connectors">3. Make notches for connectors</h4>
+
+<p>Since the triangles in the grid are not in the same orientation, I divided out the triangles into ones pointed up and ones pointed down. I then used different bisectors from the Incentre function to create straight notches on all triangles first. I then polar arrayed the straight notches around the center of the triangles for the other two sides.</p>
+
+<p><img src="/hcde598/images/assignment2/make-notches.png" alt="Making notches for both up and down triangles" /></p>
+
+<p>To make sure each notch was created out from the midpoint, I used the construct domain function to set expressions to size the straight notches on the xy plane.</p>
+
+<p><img src="/hcde598/images/assignment2/construct-domain.png" alt="Using Construct Domain to set expressions" /></p>
+
+<h4 id="creating-the-connector-piece">4. Creating the connector piece</h4>
+
+<p>To create the connector piece, I first created a rectangle 4x the size of the notches. Using the construct domain function again, I created inner rectangles aligned to the left and right of the triangle taking the inputs for each material size. I then used the region difference function to create the entire connector.</p>
+
+<p><img src="/hcde598/images/assignment2/connector.png" alt="Creating straight connectors" /></p>
+
+<h4 id="creating-15-30-and-45-connector-pieces">5. Creating 15°, 30°, and 45° connector pieces</h4>
+
+<p>I create a new rectangle half the width of the connector and used that to separate it into two sides. To do this, I made sure to set the origin of rotation at the bottom center point of the connector using the Box Corners function to find each corner. I then rotated each connector by increasing amounts of 15°.</p>
+
+<p><img src="/hcde598/images/assignment2/angled-connectors.png" alt="Rotating the angled connectors" /></p>
+
+<p>To join the left angled side and the right non-angled side, I first separated all the sides. I then found the top right corner of the angled side and the top left corner of the non-angled side, and created a line between the two points. I then joined all three curves, using flatten trees.</p>
+
+<p><img src="/hcde598/images/assignment2/join-connectors.png" alt="Joining the angled connectors" /></p>
+
+<h4 id="bisecting-the-triangles-to-create-inner-polygons">6. Bisecting the triangles to create inner polygons</h4>
+
+<p>I baked both the triangles into Rhino and created the bisecting lines by hand to make sure they were all truly unique for each set of triangles. I used a line and checked 'On curve' to make sure it would snap to each inner triangle. I then used trim to select which half I wanted to delete. I then joined all the (now) inner polygon curves.</p>
+
+<p><img src="/hcde598/images/assignment2/bisecting.png" alt="Inner polygons" /></p>
+
+<h4 id="setting-the-shapes-up-for-printing">7. Setting the shapes up for printing</h4>
+
+<p>I then set the shapes to different layers to allow printing at different settings on different materials. I actually ended up combining the inner polygons and outer triangles to create two sets of shapes so that the acrylic and wood pieces would be different.</p>
+
+<p><img src="/hcde598/images/assignment2/layers.png" alt="Dividing the shapes into layers for different printing" /></p>
 
 <h2 id="printing">Printing</h2>
 
 <p>I had set up my units in Rhino to be in inches to match everything else and checked the 1 to 1 matching on the export box, so I didn't run into any sizing issues like my classmates who were in the Mill at the same time as me. They didn't seem to have an issue once they set everything to inches as well. I actually exported everything to Illustrator so I could be damn sure it would print at the correct size.</p>
 
-<p>I set up a test layer with four connector pieces in different colors and then color mapped them to a range of values to find the best setting for each material. This also allowed me to test the connection between materials. I found it to be a bit loose at first and reduced the size of the notch rectanges by 0.05 inches for each side.</p>
+<p>I set up a test layer with four connector pieces in different colors and then color mapped them to a range of values to find the best setting for each material. This also allowed me to test the connection between materials. I found it to be a bit loose at first and reduced the size of the notch rectangles by 0.05 inches for each side.</p>
 
 <p>I masked the plywood and left the protective film on the acrylic sheets to reduce the burnt haze on the wood. I probably should've masked the clear sheet since it had only a clear protector and should've masked the back of the plywood.</p>
 
