@@ -11,7 +11,7 @@ _It sticks together, yay <i class="em em-smile"></i>_
 - [Illustrator file](http://klare.io/hcde598/documentation/rhino-grasshopper/cutout-triangles-kit.ai)
 - [Grasshopper source code](http://klare.io/hcde598/documentation/rhino-grasshopper/cutout-triangles-kit.gh)
 
-![Assembled](assignment2/IMG_2452.jpg)
+![Assembled](assignment2/IMG_2461.jpg)
 
 ## Designing the kit
 
