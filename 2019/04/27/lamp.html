@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>3D + Lasercut Lamp</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,700|Spectral:400,700"
+      rel="stylesheet"
+    />
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+    <link href="/hcde598/stylesheets/site.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="ph4 pt4 pb2 flex-ns justify-between-ns">
+      <nav>
+        <h1 class="mt0 db dib-ns"><a href="/">Klare Frank</a></h1>
+        <h2 class="mt0 ml2-ns db dib-ns">HCDE 598 Digital Fabrication</h2>
+      </nav>
+      <nav>
+        <a href="mailto:klare@uw.edu" class="link mt0 mt2-ns dib sans-serif b f5">klare@uw.edu</a>
+      </nav>
+    </header>
+    
+<div id="main" role="main" class="assignment">
+  <header class="ph4 pv4 pv0-ns mv4 mv0-ns">
+    <div
+      class="flex-m items-center-m justify-between-m flex-l items-center-l justify-between-l mw8 center"
+    >
+      <div class=" z-1 relative header-content">
+        <h1 class="mt2 mb0 f0-ns f1 lh-solid db">
+          3D + Lasercut Lamp
+        </h1>
+        <time datetime="" class="dib mt0 f4-ns f5 mb3 sans-serif fw3"
+          >April 27 2019</time
+        >
+      </div>
+      <figure class="mh0 mv2 mt3 z-1 relative">
+        <img src="/hcde598/images/assignment3/IMG_2501.jpg" alt="3D + Lasercut Lamp" />
+      </figure>
+    </div>
+    <div class="bg"></div>
+  </header>
+
+  <div class="mw7 center ph4 ">
+    <article class="mt4 lh-copy">
+      <div class="mw7">
+        <p>For this project, I created a tall pendant lamp. The inside connector was 3D printed while the shade was laser cut on plywood with angled cut-outs. This transforms the light into nice patterns.</p>
+
+<p>I decided to approach this by first tackling the 3D printing part of the project and then using the measurements from what I printed to laser cut.</p>
+
+<h3 id="d-printing-documentation">3D printing Documentation</h3>
+
+<ul>
+  <li><a href="http://klare.io/hcde598/documentation/lamp/2wheel.3dm">Rhino 3D model</a></li>
+  <li><a href="http://klare.io/hcde598/documentation/lamp/2wheel.3dm">STL</a></li>
+</ul>
+
+<h3 id="laser-cutting-documentation">Laser Cutting Documentation</h3>
+
+<ul>
+  <li><a href="http://klare.io/hcde598/documentation/lamp/wood.3dm">Rhino model</a></li>
+  <li><a href="http://klare.io/hcde598/documentation/lamp/wood.AI">Illustrator printing file</a></li>
+</ul>
+
+<h2 id="first-attempt">First Attempt</h2>
+
+<p>For my first idea, I really wanted to see if I could reuse my LED light string I had previously used in Physical Computing. My Boyfriend and I had written a C++ program to create vectors of light sequences, so it would've been great to get this working again.</p>
+
+<p><img src="/hcde598/images/assignment3/IMG_2465.JPG" alt="Using LED light string" /></p>
+
+<p>I attempted to print connectors that would fit onto each led on the string and then hook onto a laser cut piece. Then each led + laser cut leaf could be assembled in a spiral pattern to create a lampshade. Would've been cool.</p>
+
+<p>Since I was already in the MILL Thursday teaching 5th graders the User-Centered Design process for Engineering Discovery Days, I stayed after to start printing even though I didn't have a solid plan. Despite having a nicely printed test piece, printing other connectors was an utter failure. Lesson learned: don't try to print lots of little pieces because it's going to take forever or have some failure if you try to print them all at once.</p>
+
+<p>I set the printer to 235° for filament and 55° for build plate per the recommendation of the MILL staff.</p>
+
+<p><img src="/hcde598/images/assignment3/IMG_2482.JPG" alt="Bad pieces" />
+<em>Connectors on each LED</em></p>
+
+<p>Even if I <em>could</em> get a lot of these printed at the exact measurements I needed, I still needed to devise a way to piece together the lamp itself. I didn't have a great idea for that. After failing to print these connectors, and coming back from the MILL with pieces I had to Dremel (the tool, not the software) a good enough hole out of, I scraped all this work and started to think about the construction of lampshades instead. It really felt like 4 and a half hours of my life wasted.</p>
+
+<ul>
+  <li><a href="http://klare.io/hcde598/documentation/lamp/lamp-connector.3dm">Rhino 3D model for connectors</a></li>
+</ul>
+
+<h2 id="second-attempt">Second Attempt</h2>
+
+<p>I created a cylinder with spokes for the next attempt. At the end of each spoke is a "T" where I imagined the laser cut pieces could drop onto.</p>
+
+<p><img src="/hcde598/images/assignment3/wheel.png" alt="Building the wheel and spoke idea instead" />
+<em>Building the second model idea in Rhino</em></p>
+
+<p>My first attempt to print this came out so very wrong. I went into the MILL Friday morning to set this to print and came back later in the day. The whole print broke apart when I was trying to get it off of the bed.</p>
+
+<p><img src="/hcde598/images/assignment3/IMG_2484.JPG" alt="Building the wheel and spoke idea instead" />
+<em>Not cool. Another 1/2 a day wasted.</em></p>
+
+<p>I went back to Rhino and built another, beefier model that only had 6 spokes. If I was going to attempt this again, I wanted to be damn sure I could print something I could actually use.
+I had created other versions of this that staggered the spokes in a spiral up the inner cylinder but didn't want to risk having any support structures fail in printing.</p>
+
+<p><img src="/hcde598/images/assignment3/spiral.png" alt="Spiral model" />
+<em>Double spiral model</em></p>
+
+<p>I made sure everything was connected together with BooleanUnion in Rhino, exported to Dremel's software and double checked the layers with Joshua to make sure they'd print all as one object. We also swapped out the filament. This model finally print properly.</p>
+
+<p><img src="/hcde598/images/assignment3/IMG_2491.JPG" alt="Building the wheel and spoke idea instead" />
+<em>Yay, success after 9 and a half hours in the MILL <i class="em em-upside_down_face"></i></em></p>
+
+<p>I laser cut each side of the shade on plywood I had sitting around in my place. There were some people at the MILL who had been laser engraving for hours on both printers and another person who's laser engraving was set to take another hour after that, so it was a PITA to wait around for that to finish.</p>
+
+<p>I really just wanted to be done at this point.</p>
+
+<p>I masked off the area to be laser cut and used the same settings as last time for wood: 10 speed, 100 power, 50 frequency.</p>
+
+<p><img src="/hcde598/images/assignment3/laser-gif.gif" alt="Laser cutting the shade" /></p>
+
+<p>I actually really enjoyed that I could fit every laser cut piece onto one of the spokes for easy transport.</p>
+
+<p><img src="/hcde598/images/assignment3/IMG_2497.JPG" alt="Building the wheel and spoke idea instead" /></p>
+
+<h2 id="future-considerations">Future considerations</h2>
+
+<p>It would've been nice to:</p>
+
+<ul>
+  <li>iterate on my 3d printed model by taking in every other spoke to the exact specification of the where the inset pieces sit.</li>
+  <li>have created another "T" to sandwich the laser cut pieces on the spoke at the exact point.</li>
+  <li>Actually print the spiralized version of the model I created.</li>
+</ul>
+
+<p>But after spending 9.5 hours in the MILL, I called this project done. There was way too much pressure to get something printed before the rush of a "Tuesday Night Crew". I failed my only class in undergrad because they ran out of materials for everyone to work with for the last two assignments and this felt a bit like I could've been on the edge of reliving that moment. Not exactly the best conditions to work creatively under.</p>
+
+<p>I would've liked to have completed this assignment with a longer time frame for ideation and exploration.</p>
+
+<p><img src="/hcde598/images/assignment3/IMG_2494.jpg" alt="After laser cutting" />
+<em>Using gravity keep things in place because it's a hanging lamp.</em></p>
+
+<p><img src="/hcde598/images/assignment3/IMG_2496.JPG" alt="After laser cutting" />
+<em>Every other piece inset for more light effects.</em></p>
+
+<p><img src="/hcde598/images/assignment3/IMG_2502.jpg" alt="Assembled" /></p>
+
+      </div>
+    </article>
+  </div>
+</div>
+
+<aside class="mt4 ph4">
+  <div class="mw7 center">
+    <ul
+      class="flex-ns items-center justify-between list pl0 bt b--light-gray pt3"
+    >
+      <li>
+         
+        <p>
+          <span class="f5 db b sans-serif">Previous Post</span>
+          <a
+            href="/hcde598/2019/04/23/parametric-kit.html"
+            rel="prev"
+            title="Previous article: Parametric Kit"
+            class="sans-serif dib mt1"
+          >
+            Parametric Kit
+          </a>
+        </p>
+      </li>
+      <li class="tr-ns">
+               </li>
+    </ul>
+  </div>
+</aside>
+ 
+  </body>
+</html>
