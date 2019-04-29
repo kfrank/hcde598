@@ -59,7 +59,7 @@ page "/feed.xml", layout: false
 # end
 
 # Build-specific configuration
-set :site_url, ""
+set :site_url, "/hcde598"
 
 configure :build do
   set :http_prefix, '/hcde598'

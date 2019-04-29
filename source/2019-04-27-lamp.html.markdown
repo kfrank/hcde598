@@ -1,0 +1,94 @@
+---
+title: 3D + Lasercut Lamp
+date: 2019-04-27 01:02 UTC
+tags:
+img: assignment3/IMG_2501.jpg
+---
+
+For this project, I created a tall pendant lamp. The inside connector was 3D printed while the shade was laser cut on plywood with angled cut-outs. This transforms the light into nice patterns.
+
+I decided to approach this by first tackling the 3D printing part of the project and then using the measurements from what I printed to laser cut.
+
+### 3D printing Documentation
+
+- [Rhino 3D model](http://klare.io/hcde598/documentation/lamp/2wheel.3dm)
+- [STL](http://klare.io/hcde598/documentation/lamp/2wheel.3dm)
+
+### Laser Cutting Documentation
+
+- [Rhino model](http://klare.io/hcde598/documentation/lamp/wood.3dm)
+- [Illustrator printing file](http://klare.io/hcde598/documentation/lamp/wood.AI)
+
+## First Attempt
+
+For my first idea, I really wanted to see if I could reuse my LED light string I had previously used in Physical Computing. My Boyfriend and I had written a C++ program to create vectors of light sequences, so it would've been great to get this working again.
+
+![Using LED light string](assignment3/IMG_2465.JPG)
+
+I attempted to print connectors that would fit onto each led on the string and then hook onto a laser cut piece. Then each led + laser cut leaf could be assembled in a spiral pattern to create a lampshade. Would've been cool.
+
+Since I was already in the MILL Thursday teaching 5th graders the User-Centered Design process for Engineering Discovery Days, I stayed after to start printing even though I didn't have a solid plan. Despite having a nicely printed test piece, printing other connectors was an utter failure. Lesson learned: don't try to print lots of little pieces because it's going to take forever or have some failure if you try to print them all at once.
+
+I set the printer to 235° for filament and 55° for build plate per the recommendation of the MILL staff.
+
+![Bad pieces](assignment3/IMG_2482.JPG)
+_Connectors on each LED_
+
+Even if I _could_ get a lot of these printed at the exact measurements I needed, I still needed to devise a way to piece together the lamp itself. I didn't have a great idea for that. After failing to print these connectors, and coming back from the MILL with pieces I had to Dremel (the tool, not the software) a good enough hole out of, I scraped all this work and started to think about the construction of lampshades instead. It really felt like 4 and a half hours of my life wasted.
+
+- [Rhino 3D model for connectors](http://klare.io/hcde598/documentation/lamp/lamp-connector.3dm)
+
+## Second Attempt
+
+I created a cylinder with spokes for the next attempt. At the end of each spoke is a "T" where I imagined the laser cut pieces could drop onto.
+
+![Building the wheel and spoke idea instead](assignment3/wheel.png)
+_Building the second model idea in Rhino_
+
+My first attempt to print this came out so very wrong. I went into the MILL Friday morning to set this to print and came back later in the day. The whole print broke apart when I was trying to get it off of the bed.
+
+![Building the wheel and spoke idea instead](assignment3/IMG_2484.JPG)
+_Not cool. Another 1/2 a day wasted._
+
+I went back to Rhino and built another, beefier model that only had 6 spokes. If I was going to attempt this again, I wanted to be damn sure I could print something I could actually use.
+I had created other versions of this that staggered the spokes in a spiral up the inner cylinder but didn't want to risk having any support structures fail in printing.
+
+![Spiral model](assignment3/spiral.png)
+_Double spiral model_
+
+I made sure everything was connected together with BooleanUnion in Rhino, exported to Dremel's software and double checked the layers with Joshua to make sure they'd print all as one object. We also swapped out the filament. This model finally print properly.
+
+![Building the wheel and spoke idea instead](assignment3/IMG_2491.JPG)
+_Yay, success after 9 and a half hours in the MILL <i class="em em-upside_down_face"></i>_
+
+I laser cut each side of the shade on plywood I had sitting around in my place. There were some people at the MILL who had been laser engraving for hours on both printers and another person who's laser engraving was set to take another hour after that, so it was a PITA to wait around for that to finish.
+
+I really just wanted to be done at this point.
+
+I masked off the area to be laser cut and used the same settings as last time for wood: 10 speed, 100 power, 50 frequency.
+
+![Laser cutting the shade](assignment3/laser-gif.gif)
+
+I actually really enjoyed that I could fit every laser cut piece onto one of the spokes for easy transport.
+
+![Building the wheel and spoke idea instead](assignment3/IMG_2497.JPG)
+
+## Future considerations
+
+It would've been nice to:
+
+- iterate on my 3d printed model by taking in every other spoke to the exact specification of the where the inset pieces sit.
+- have created another "T" to sandwich the laser cut pieces on the spoke at the exact point.
+- Actually print the spiralized version of the model I created.
+
+But after spending 9.5 hours in the MILL, I called this project done. There was way too much pressure to get something printed before the rush of a "Tuesday Night Crew". I failed my only class in undergrad because they ran out of materials for everyone to work with for the last two assignments and this felt a bit like I could've been on the edge of reliving that moment. Not exactly the best conditions to work creatively under.
+
+I would've liked to have completed this assignment with a longer time frame for ideation and exploration.
+
+![After laser cutting](assignment3/IMG_2494.jpg)
+_Using gravity keep things in place because it's a hanging lamp._
+
+![After laser cutting](assignment3/IMG_2496.JPG)
+_Every other piece inset for more light effects._
+
+![Assembled](assignment3/IMG_2502.jpg)
