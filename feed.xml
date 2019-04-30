@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://blog.url.com/hcde598/2019/04/27/lamp.html"/>
     <id>http://blog.url.com/hcde598/2019/04/27/lamp.html</id>
     <published>2019-04-26T18:02:00-07:00</published>
-    <updated>2019-04-29T13:10:31-07:00</updated>
+    <updated>2019-04-30T10:19:25-07:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -48,8 +48,11 @@
 
 &lt;p&gt;I set the printer to 235° for filament and 55° for build plate per the recommendation of the MILL staff.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="/hcde598/images/assignment3/IMG_2482.JPG" alt="Bad pieces" /&gt;
-&lt;em&gt;Connectors on each LED&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/hcde598/images/assignment3/connector.png" alt="Connector in Rhino at 4 different views" /&gt;
+&lt;em&gt;Connector modeled in Rhino.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment3/IMG_2498.JPG" alt="Bad pieces" /&gt;
+&lt;em&gt;Bad pieces that didn't print right.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Even if I &lt;em&gt;could&lt;/em&gt; get a lot of these printed at the exact measurements I needed, I still needed to devise a way to piece together the lamp itself. I didn't have a great idea for that. After failing to print these connectors, and coming back from the MILL with pieces I had to Dremel (the tool, not the software) a good enough hole out of, I scraped all this work and started to think about the construction of lampshades instead. It really felt like 4 and a half hours of my life wasted.&lt;/p&gt;
 
@@ -120,7 +123,7 @@ I had created other versions of this that staggered the spokes in a spiral up th
     <link rel="alternate" href="http://blog.url.com/hcde598/2019/04/23/parametric-kit.html"/>
     <id>http://blog.url.com/hcde598/2019/04/23/parametric-kit.html</id>
     <published>2019-04-22T19:26:00-07:00</published>
-    <updated>2019-04-26T18:01:18-07:00</updated>
+    <updated>2019-04-30T10:14:25-07:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -290,7 +293,7 @@ I had created other versions of this that staggered the spokes in a spiral up th
     <link rel="alternate" href="http://blog.url.com/hcde598/2019/04/16/laser-cut-kit.html"/>
     <id>http://blog.url.com/hcde598/2019/04/16/laser-cut-kit.html</id>
     <published>2019-04-15T23:11:00-07:00</published>
-    <updated>2019-04-26T18:01:18-07:00</updated>
+    <updated>2019-04-30T10:14:25-07:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -365,7 +368,7 @@ I had created other versions of this that staggered the spokes in a spiral up th
     <link rel="alternate" href="http://blog.url.com/hcde598/2019/04/04/nameboard.html"/>
     <id>http://blog.url.com/hcde598/2019/04/04/nameboard.html</id>
     <published>2019-04-03T20:19:00-07:00</published>
-    <updated>2019-04-26T18:01:18-07:00</updated>
+    <updated>2019-04-30T10:14:25-07:00</updated>
     <author>
       <name>Article Author</name>
     </author>
