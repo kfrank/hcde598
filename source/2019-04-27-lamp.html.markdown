@@ -31,8 +31,11 @@ Since I was already in the MILL Thursday teaching 5th graders the User-Centered 
 
 I set the printer to 235° for filament and 55° for build plate per the recommendation of the MILL staff.
 
-![Bad pieces](assignment3/IMG_2482.JPG)
-_Connectors on each LED_
+![Connector in Rhino at 4 different views](assignment3/connector.png)
+_Connector modeled in Rhino._
+
+![Bad pieces](assignment3/IMG_2498.JPG)
+_Bad pieces that didn't print right._
 
 Even if I _could_ get a lot of these printed at the exact measurements I needed, I still needed to devise a way to piece together the lamp itself. I didn't have a great idea for that. After failing to print these connectors, and coming back from the MILL with pieces I had to Dremel (the tool, not the software) a good enough hole out of, I scraped all this work and started to think about the construction of lampshades instead. It really felt like 4 and a half hours of my life wasted.
 
