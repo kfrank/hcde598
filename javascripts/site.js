@@ -149,7 +149,7 @@
       this.DOM.svg.style.transform = `translateX(${this.lastMousePos.translation
         .x -
         winsize.width / 2}px) translateY(${this.lastMousePos.translation.y -
-        winsize.height / 3}px)`;
+        winsize.height / 2}px)`;
 
       // Scale goes from 0 to 50 for mouseDistance values between 0 to 140
       this.lastMousePos.displacement.x = lerp(
