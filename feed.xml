@@ -14,13 +14,30 @@
     <link rel="alternate" href="http://blog.url.com/hcde598/2019/05/11/cnc-milled-box.html"/>
     <id>http://blog.url.com/hcde598/2019/05/11/cnc-milled-box.html</id>
     <published>2019-05-11T11:02:00-04:00</published>
-    <updated>2019-05-11T11:26:11-04:00</updated>
+    <updated>2019-05-11T11:34:14-04:00</updated>
     <author>
       <name>Article Author</name>
     </author>
     <content type="html">&lt;p&gt;I decided to make a box with tabs for the sides to fit together and grooves for the top and bottom. This allows the top to slide out to access the contents of the box.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="/hcde598/images/assignment5/IMG_2614.jpeg" alt="Sketching out the plan" /&gt;&lt;/p&gt;
+
+&lt;h2 id="documentation"&gt;Documentation&lt;/h2&gt;
+
+&lt;h3 id="rhino--illustrator"&gt;Rhino &amp;amp; Illustrator&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="cnc-box.3dm"&gt;Rhino&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="cnc-box.Ai"&gt;Illustrator&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="bantam-tools"&gt;Bantam Tools&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="side-long-2.btm"&gt;Long Sides with Tab Cutouts and Grooves&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="side-short-2.btm"&gt;Short Sides with Tabs and Grooves&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="topbottom.btm"&gt;Top and Bottom&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id="making-the-shapes"&gt;Making the shapes&lt;/h2&gt;
 
@@ -63,7 +80,7 @@
     <link rel="alternate" href="http://blog.url.com/hcde598/2019/05/05/gear-assembly.html"/>
     <id>http://blog.url.com/hcde598/2019/05/05/gear-assembly.html</id>
     <published>2019-05-05T16:48:00-04:00</published>
-    <updated>2019-05-05T18:34:25-04:00</updated>
+    <updated>2019-05-11T11:32:15-04:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -162,7 +179,7 @@
     <link rel="alternate" href="http://blog.url.com/hcde598/2019/04/27/lamp.html"/>
     <id>http://blog.url.com/hcde598/2019/04/27/lamp.html</id>
     <published>2019-04-26T21:02:00-04:00</published>
-    <updated>2019-05-05T18:34:25-04:00</updated>
+    <updated>2019-05-11T11:32:15-04:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -271,7 +288,7 @@ I had created other versions of this that staggered the spokes in a spiral up th
     <link rel="alternate" href="http://blog.url.com/hcde598/2019/04/23/parametric-kit.html"/>
     <id>http://blog.url.com/hcde598/2019/04/23/parametric-kit.html</id>
     <published>2019-04-22T22:26:00-04:00</published>
-    <updated>2019-05-05T18:34:25-04:00</updated>
+    <updated>2019-05-11T11:32:15-04:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -441,7 +458,7 @@ I had created other versions of this that staggered the spokes in a spiral up th
     <link rel="alternate" href="http://blog.url.com/hcde598/2019/04/16/laser-cut-kit.html"/>
     <id>http://blog.url.com/hcde598/2019/04/16/laser-cut-kit.html</id>
     <published>2019-04-16T02:11:00-04:00</published>
-    <updated>2019-05-05T18:34:25-04:00</updated>
+    <updated>2019-05-11T11:32:15-04:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -516,7 +533,7 @@ I had created other versions of this that staggered the spokes in a spiral up th
     <link rel="alternate" href="http://blog.url.com/hcde598/2019/04/04/nameboard.html"/>
     <id>http://blog.url.com/hcde598/2019/04/04/nameboard.html</id>
     <published>2019-04-03T23:19:00-04:00</published>
-    <updated>2019-05-05T18:34:25-04:00</updated>
+    <updated>2019-05-11T11:32:15-04:00</updated>
     <author>
       <name>Article Author</name>
     </author>
