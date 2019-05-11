@@ -9,6 +9,19 @@ I decided to make a box with tabs for the sides to fit together and grooves for 
 
 ![Sketching out the plan](assignment5/IMG_2614.jpeg)
 
+## Documentation
+
+### Rhino & Illustrator
+
+- [Rhino](cnc-box.3dm)
+- [Illustrator](cnc-box.Ai)
+
+### Bantam Tools
+
+- [Long Sides with Tab Cutouts and Grooves](side-long-2.btm)
+- [Short Sides with Tabs and Grooves](side-short-2.btm)
+- [Top and Bottom](topbottom.btm)
+
 ## Making the shapes
 
 I started out generating the shapes in Grasshopper so I could control the size better. From there, I baked all the sides in Rhino, filleted the tabs, and then created the top and bottom pieces based on the length of the groove plus an allowance for material thickness.
