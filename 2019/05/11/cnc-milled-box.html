@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>CNC Milled Box</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,700|Spectral:400,700"
+      rel="stylesheet"
+    />
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+    <link href="/hcde598/stylesheets/site.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="ph4 pt4 pb2 flex-ns justify-between-ns">
+      <nav>
+        <h1 class="mt0 db dib-ns"><a href="/">Klare Frank</a></h1>
+        <h2 class="mt0 ml2-ns db dib-ns">HCDE 598 Digital Fabrication</h2>
+      </nav>
+      <nav>
+        <a href="mailto:klare@uw.edu" class="link mt0 mt2-ns dib sans-serif b f5">klare@uw.edu</a>
+      </nav>
+    </header>
+    
+<div id="main" role="main" class="assignment">
+  <header class="ph4 pv4 pv0-ns mv4 mv0-ns">
+    <div
+      class="flex-m items-center-m justify-between-m flex-l items-center-l justify-between-l mw8 center"
+    >
+      <div class=" z-1 relative header-content">
+        <h1 class="mt2 mb0 f0-ns f1 lh-solid db">
+          CNC Milled Box
+        </h1>
+        <time datetime="" class="dib mt0 f4-ns f5 mb3 sans-serif fw3"
+          >May 11 2019</time
+        >
+      </div>
+      <figure class="mh0 mv2 mt3 z-1 relative">
+        <img src="/hcde598/images/assignment5/IMG_2610.jpg" alt="CNC Milled Box" />
+      </figure>
+    </div>
+    <div class="bg"></div>
+  </header>
+
+  <div class="mw7 center ph4 ">
+    <article class="mt4 lh-copy">
+      <div class="mw7">
+        <p>I decided to make a box with tabs for the sides to fit together and grooves for the top and bottom. This allows the top to slide out to access the contents of the box.</p>
+
+<p><img src="/hcde598/images/assignment5/IMG_2614.jpeg" alt="Sketching out the plan" /></p>
+
+<h2 id="making-the-shapes">Making the shapes</h2>
+
+<p>I started out generating the shapes in Grasshopper so I could control the size better. From there, I baked all the sides in Rhino, filleted the tabs, and then created the top and bottom pieces based on the length of the groove plus an allowance for material thickness.</p>
+
+<p><img src="/hcde598/images/assignment5/grasshopper.png" alt="Starting in Grasshopper" />
+<em>Generating box sides in Grasshopper</em></p>
+
+<p><img src="/hcde598/images/assignment5/rhino.png" alt="Shapes built in Rhino" />
+<em>From top left, clockwise: Top of box, bottom of box, short side (purple line is a groove), long side (purple lines are grooves), short side.</em></p>
+
+<p>I ended up modifying my original side design allow the top to overhang the short side with the cut out tab to make sliding the top out easier.</p>
+
+<h2 id="setting-up-files">Setting up files</h2>
+
+<p>I exported the shapes in Rhino and opened them in Illustrator so that I could make detailed modifications and then export each side as an svg. When saving svgs, I decided to save each shape part as an individual svg to import into the Bantam Tools software. This also allowed me to set different mill tool preferences for each part. The tab cutouts on the long sides needed a 1/64 size mill tool while the rest of the parts could be done mostly with a 1/16 size. I also left a little overhang on the engraved cutouts so that the top would be able to slide properly.</p>
+
+<p><img src="/hcde598/images/assignment5/bantam.png" alt="Short sides in Bantam" />
+<em>The short sides with a little overhand for the groove.</em></p>
+
+<p>It was actually really straightforward to set up the mill and put in my pieces. I didn't have any problems here.</p>
+
+<p><img src="/hcde598/images/assignment5/IMG_2608.jpg" alt="Mill milling" /></p>
+
+<p><img src="/hcde598/images/assignment5/IMG_2607.jpg" alt="Cutting out the large sides" /></p>
+
+<h2 id="box-assembled">Box, Assembled</h2>
+
+<p>Magically, all my math was correct and the box fit together. <i class="em em-tada"></i></p>
+
+<p><img src="/hcde598/images/assignment5/IMG_2609.jpg" alt="Final box, together" /></p>
+
+<p><img src="/hcde598/images/assignment5/IMG_2610.jpg" alt="Top" /></p>
+
+<p><img src="/hcde598/images/assignment5/IMG_2611.jpg" alt="Top pulled out" /></p>
+
+      </div>
+    </article>
+  </div>
+</div>
+
+<aside class="mt4 ph4">
+  <div class="mw7 center">
+    <ul
+      class="flex-ns items-center justify-between list pl0 bt b--light-gray pt3"
+    >
+      <li>
+         
+        <p>
+          <span class="f5 db b sans-serif">Previous Post</span>
+          <a
+            href="/hcde598/2019/05/05/gear-assembly.html"
+            rel="prev"
+            title="Previous article: Gear Assembly"
+            class="sans-serif dib mt1"
+          >
+            Gear Assembly
+          </a>
+        </p>
+      </li>
+      <li class="tr-ns">
+               </li>
+    </ul>
+  </div>
+</aside>
+ 
+  </body>
+</html>

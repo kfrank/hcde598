@@ -5,16 +5,65 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2019-05-05T13:48:00-07:00</updated>
+  <updated>2019-05-11T11:02:00-04:00</updated>
   <author>
     <name>Blog Author</name>
   </author>
   <entry>
+    <title>CNC Milled Box</title>
+    <link rel="alternate" href="http://blog.url.com/hcde598/2019/05/11/cnc-milled-box.html"/>
+    <id>http://blog.url.com/hcde598/2019/05/11/cnc-milled-box.html</id>
+    <published>2019-05-11T11:02:00-04:00</published>
+    <updated>2019-05-11T11:26:11-04:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;I decided to make a box with tabs for the sides to fit together and grooves for the top and bottom. This allows the top to slide out to access the contents of the box.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment5/IMG_2614.jpeg" alt="Sketching out the plan" /&gt;&lt;/p&gt;
+
+&lt;h2 id="making-the-shapes"&gt;Making the shapes&lt;/h2&gt;
+
+&lt;p&gt;I started out generating the shapes in Grasshopper so I could control the size better. From there, I baked all the sides in Rhino, filleted the tabs, and then created the top and bottom pieces based on the length of the groove plus an allowance for material thickness.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment5/grasshopper.png" alt="Starting in Grasshopper" /&gt;
+&lt;em&gt;Generating box sides in Grasshopper&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment5/rhino.png" alt="Shapes built in Rhino" /&gt;
+&lt;em&gt;From top left, clockwise: Top of box, bottom of box, short side (purple line is a groove), long side (purple lines are grooves), short side.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I ended up modifying my original side design allow the top to overhang the short side with the cut out tab to make sliding the top out easier.&lt;/p&gt;
+
+&lt;h2 id="setting-up-files"&gt;Setting up files&lt;/h2&gt;
+
+&lt;p&gt;I exported the shapes in Rhino and opened them in Illustrator so that I could make detailed modifications and then export each side as an svg. When saving svgs, I decided to save each shape part as an individual svg to import into the Bantam Tools software. This also allowed me to set different mill tool preferences for each part. The tab cutouts on the long sides needed a 1/64 size mill tool while the rest of the parts could be done mostly with a 1/16 size. I also left a little overhang on the engraved cutouts so that the top would be able to slide properly.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment5/bantam.png" alt="Short sides in Bantam" /&gt;
+&lt;em&gt;The short sides with a little overhand for the groove.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;It was actually really straightforward to set up the mill and put in my pieces. I didn't have any problems here.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment5/IMG_2608.jpg" alt="Mill milling" /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment5/IMG_2607.jpg" alt="Cutting out the large sides" /&gt;&lt;/p&gt;
+
+&lt;h2 id="box-assembled"&gt;Box, Assembled&lt;/h2&gt;
+
+&lt;p&gt;Magically, all my math was correct and the box fit together. &lt;i class="em em-tada"&gt;&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment5/IMG_2609.jpg" alt="Final box, together" /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment5/IMG_2610.jpg" alt="Top" /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment5/IMG_2611.jpg" alt="Top pulled out" /&gt;&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
     <title>Gear Assembly</title>
     <link rel="alternate" href="http://blog.url.com/hcde598/2019/05/05/gear-assembly.html"/>
     <id>http://blog.url.com/hcde598/2019/05/05/gear-assembly.html</id>
-    <published>2019-05-05T13:48:00-07:00</published>
-    <updated>2019-05-05T15:23:59-07:00</updated>
+    <published>2019-05-05T16:48:00-04:00</published>
+    <updated>2019-05-05T18:34:25-04:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -112,8 +161,8 @@
     <title>3D + Lasercut Lamp</title>
     <link rel="alternate" href="http://blog.url.com/hcde598/2019/04/27/lamp.html"/>
     <id>http://blog.url.com/hcde598/2019/04/27/lamp.html</id>
-    <published>2019-04-26T18:02:00-07:00</published>
-    <updated>2019-05-05T13:47:26-07:00</updated>
+    <published>2019-04-26T21:02:00-04:00</published>
+    <updated>2019-05-05T18:34:25-04:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -221,8 +270,8 @@ I had created other versions of this that staggered the spokes in a spiral up th
     <title>Parametric Kit</title>
     <link rel="alternate" href="http://blog.url.com/hcde598/2019/04/23/parametric-kit.html"/>
     <id>http://blog.url.com/hcde598/2019/04/23/parametric-kit.html</id>
-    <published>2019-04-22T19:26:00-07:00</published>
-    <updated>2019-05-05T13:47:26-07:00</updated>
+    <published>2019-04-22T22:26:00-04:00</published>
+    <updated>2019-05-05T18:34:25-04:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -391,8 +440,8 @@ I had created other versions of this that staggered the spokes in a spiral up th
     <title>Laser Cut Kit</title>
     <link rel="alternate" href="http://blog.url.com/hcde598/2019/04/16/laser-cut-kit.html"/>
     <id>http://blog.url.com/hcde598/2019/04/16/laser-cut-kit.html</id>
-    <published>2019-04-15T23:11:00-07:00</published>
-    <updated>2019-05-05T13:47:26-07:00</updated>
+    <published>2019-04-16T02:11:00-04:00</published>
+    <updated>2019-05-05T18:34:25-04:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -466,8 +515,8 @@ I had created other versions of this that staggered the spokes in a spiral up th
     <title>Nameboard</title>
     <link rel="alternate" href="http://blog.url.com/hcde598/2019/04/04/nameboard.html"/>
     <id>http://blog.url.com/hcde598/2019/04/04/nameboard.html</id>
-    <published>2019-04-03T20:19:00-07:00</published>
-    <updated>2019-05-05T13:47:26-07:00</updated>
+    <published>2019-04-03T23:19:00-04:00</published>
+    <updated>2019-05-05T18:34:25-04:00</updated>
     <author>
       <name>Article Author</name>
     </author>
