@@ -13,14 +13,14 @@ I decided to make a box with tabs for the sides to fit together and grooves for 
 
 ### Rhino & Illustrator
 
-- [Rhino](cnc-box.3dm)
-- [Illustrator](cnc-box.Ai)
+- [Rhino](/hcde598/documentation/cnc-box/cnc-box.3dm)
+- [Illustrator](/hcde598/documentation/cnc-box/cnc-box.Ai)
 
 ### Bantam Tools
 
-- [Long Sides with Tab Cutouts and Grooves](side-long-2.btm)
-- [Short Sides with Tabs and Grooves](side-short-2.btm)
-- [Top and Bottom](topbottom.btm)
+- [Long Sides with Tab Cutouts and Grooves](/hcde598/documentation/cnc-box/side-long-2.btm)
+- [Short Sides with Tabs and Grooves](/hcde598/documentation/cnc-box/side-short-2.btm)
+- [Top and Bottom](/hcde598/documentation/cnc-box/topbottom.btm)
 
 ## Making the shapes
 
