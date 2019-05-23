@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://blog.url.com/hcde598/2019/05/17/casting-rockets.html"/>
     <id>http://blog.url.com/hcde598/2019/05/17/casting-rockets.html</id>
     <published>2019-05-16T19:20:00-07:00</published>
-    <updated>2019-05-22T18:29:50-07:00</updated>
+    <updated>2019-05-22T18:37:19-07:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -24,7 +24,15 @@
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href="https://www.thingiverse.com/thing:3416703"&gt;.stl model (sourced off Thingaverse)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=""&gt;Rhino mold&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/hcde598/documentation/casting/saturnv-mold.3dm"&gt;Rhino mold&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/hcde598/documentation/casting/saturnv-mold-2.stl"&gt;Stl mold&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/hcde598/documentation/casting/D3_saturnv-mold-3d.gcode"&gt;Gcode&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="unused-documentation"&gt;Unused documentation&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="/hcde598/documentation/casting/saturnv-mold.f3d"&gt;Fusion 360&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id="process"&gt;Process&lt;/h2&gt;
@@ -73,7 +81,7 @@
     <link rel="alternate" href="http://blog.url.com/hcde598/2019/05/11/cnc-milled-box.html"/>
     <id>http://blog.url.com/hcde598/2019/05/11/cnc-milled-box.html</id>
     <published>2019-05-11T08:02:00-07:00</published>
-    <updated>2019-05-22T18:29:29-07:00</updated>
+    <updated>2019-05-22T18:33:58-07:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -139,7 +147,7 @@
     <link rel="alternate" href="http://blog.url.com/hcde598/2019/05/05/gear-assembly.html"/>
     <id>http://blog.url.com/hcde598/2019/05/05/gear-assembly.html</id>
     <published>2019-05-05T13:48:00-07:00</published>
-    <updated>2019-05-16T19:19:42-07:00</updated>
+    <updated>2019-05-22T18:33:58-07:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -238,7 +246,7 @@
     <link rel="alternate" href="http://blog.url.com/hcde598/2019/04/27/lamp.html"/>
     <id>http://blog.url.com/hcde598/2019/04/27/lamp.html</id>
     <published>2019-04-26T18:02:00-07:00</published>
-    <updated>2019-05-16T19:19:42-07:00</updated>
+    <updated>2019-05-22T18:33:58-07:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -347,7 +355,7 @@ I had created other versions of this that staggered the spokes in a spiral up th
     <link rel="alternate" href="http://blog.url.com/hcde598/2019/04/23/parametric-kit.html"/>
     <id>http://blog.url.com/hcde598/2019/04/23/parametric-kit.html</id>
     <published>2019-04-22T19:26:00-07:00</published>
-    <updated>2019-05-16T19:19:42-07:00</updated>
+    <updated>2019-05-22T18:33:58-07:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -517,7 +525,7 @@ I had created other versions of this that staggered the spokes in a spiral up th
     <link rel="alternate" href="http://blog.url.com/hcde598/2019/04/16/laser-cut-kit.html"/>
     <id>http://blog.url.com/hcde598/2019/04/16/laser-cut-kit.html</id>
     <published>2019-04-15T23:11:00-07:00</published>
-    <updated>2019-05-16T19:19:42-07:00</updated>
+    <updated>2019-05-22T18:33:58-07:00</updated>
     <author>
       <name>Article Author</name>
     </author>
