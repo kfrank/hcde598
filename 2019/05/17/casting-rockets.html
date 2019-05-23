@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Casting Rockets</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,700|Spectral:400,700"
+      rel="stylesheet"
+    />
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+    <link href="/hcde598/stylesheets/site.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="ph4 pt4 pb2 flex-ns justify-between-ns">
+      <nav>
+        <h1 class="mt0 db dib-ns"><a href="/">Klare Frank</a></h1>
+        <h2 class="mt0 ml2-ns db dib-ns">HCDE 598 Digital Fabrication</h2>
+      </nav>
+      <nav>
+        <a href="mailto:klare@uw.edu" class="link mt0 mt2-ns dib sans-serif b f5">klare@uw.edu</a>
+      </nav>
+    </header>
+    
+<div id="main" role="main" class="assignment">
+  <header class="ph4 pv4 pv0-ns mv4 mv0-ns">
+    <div
+      class="flex-m items-center-m justify-between-m flex-l items-center-l justify-between-l mw8 center"
+    >
+      <div class=" z-1 relative header-content">
+        <h1 class="mt2 mb0 f0-ns f1 lh-solid db">
+          Casting Rockets
+        </h1>
+        <time datetime="" class="dib mt0 f4-ns f5 mb3 sans-serif fw3"
+          >May 17 2019</time
+        >
+      </div>
+      <figure class="mh0 mv2 mt3 z-1 relative">
+        <img src="/hcde598/images/assignment6/IMG_2662.JPG" alt="Casting Rockets" />
+      </figure>
+    </div>
+    <div class="bg"></div>
+  </header>
+
+  <div class="mw7 center ph4 ">
+    <article class="mt4 lh-copy">
+      <div class="mw7">
+        <p>I made Saturn V rockets.</p>
+
+<h2 id="documentation">Documentation</h2>
+
+<ul>
+  <li><a href="https://www.thingiverse.com/thing:3416703">.stl model (sourced off Thingaverse)</a></li>
+  <li><a href="">Rhino mold</a></li>
+</ul>
+
+<h2 id="process">Process</h2>
+
+<p>I started out first creating the mold model in Rhino with the intention of milling on machinable wax. When I was searching around, I found out that NASA has a lot of 3D models available already. I downloaded the Saturn V rocket, but realized that it was actually a model that contained all of the separate stages of the rocket. Instead of playing puzzle in three dimensions, I went to thingaverse and borrowed a 3D model of the Saturn V rocket.</p>
+
+<p>In Rhino, I imported the rocket mesh and then created a box around it that was approximately the size of my piece of machineable wax, and then positioned the rocket so that half of it was submerged into the bottom of the box. I decided to create two halves of the rockets to speed up the amount of rockets I could cast.</p>
+
+<p><img src="/hcde598/images/assignment6/rhino.png" alt="Creating the mold in Rhino" /></p>
+
+<p>I then exported the mold and opened it in Fusion 360 to create toolpaths. After creating a toolpath only using a 1/8 flat mill, I realized that I would not get the level of detail I wanted. I went back to Fusion 360 and added two more tools: a 1/16 &amp; a 1/32. When I imported all three of these toolpaths into Bantam Tools, it estimated it would take 9 hours to complete. Not cool.</p>
+
+<p><img src="/hcde598/images/assignment6/bantam-tools.png" alt="All three toolpaths in Bantam" /></p>
+
+<p>I decided quickly to not even attempt milling on machinable wax. I then modified my mold model in Rhino to decrease the printed material on the bottom of the box so that it would print quicker. When I imported the model into the Dremel tool, it estimated roughly 3 hours. Much better. I used similar settings to my last print: Medium Quality at 0.2mm and 20% infill.</p>
+
+<p><img src="/hcde598/images/assignment6/3D-print.png" alt="Model in Dremel Tools" /></p>
+
+<p>I then sent my gcode file to the Dremel printers at the MILL with 230° filament and 55° plate settings. It printed great in about three hours.</p>
+
+<p><img src="/hcde598/images/assignment6/IMG_2629.JPG" alt="3D printing" />
+<img src="/hcde598/images/assignment6/IMG_2630.JPG" alt="3D print mold" /></p>
+
+<p>Back home, I mixed equal parts of both liquids to make the Oomoo mold. Originally I was thinking, oh great, since I have two sides, I might be able to put them together to make a two part mold. Unfortunately, the Ooomoo wasn't quite precise when drying, even though the 3d print looked much more precise. I decided at that point to not attempt to create a sprue on these molds and just stick with flat rockets which would look great on a tabletop.</p>
+
+<p><img src="/hcde598/images/assignment6/IMG_2638.JPG" alt="Setting the mold" /></p>
+
+<p>I used a small, very dull paring knife to carefully pull my mold out. Part of one mold didn't quite set completely on one of the engines, but it actually didn't end up mattering when I went to cast.</p>
+
+<p>I mixed 3 parts plaster to 1 part water and filled my molds.</p>
+
+<p><img src="/hcde598/images/assignment6/IMG_2640.JPG" alt="Filled molds" /></p>
+
+<p>It took some thought to know how to seperate the dried plaster from the mold without breaking the plaster. I figured out that pulling the mold apart on the sides of the rocket first and then the top and bottom helped get them out the best.</p>
+
+<p><img src="/hcde598/images/assignment6/IMG_2662.JPG" alt="Plaster Saturn V" />
+<img src="/hcde598/images/assignment6/IMG_2679.JPG" alt="Multiples" /></p>
+
+<h2 id="reflection">Reflection</h2>
+
+<p>To make the model even more smooth, I probably would sand down the rocket inside the model. I'd also want to print one rocket much larger to make setting the plaster and getting it out of the mold easier.</p>
+
+      </div>
+    </article>
+  </div>
+</div>
+
+<aside class="mt4 ph4">
+  <div class="mw7 center">
+    <ul
+      class="flex-ns items-center justify-between list pl0 bt b--light-gray pt3"
+    >
+      <li>
+         
+        <p>
+          <span class="f5 db b sans-serif">Previous Post</span>
+          <a
+            href="/hcde598/2019/05/11/cnc-milled-box.html"
+            rel="prev"
+            title="Previous article: CNC Milled Box"
+            class="sans-serif dib mt1"
+          >
+            CNC Milled Box
+          </a>
+        </p>
+      </li>
+      <li class="tr-ns">
+               </li>
+    </ul>
+  </div>
+</aside>
+ 
+  </body>
+</html>

@@ -5,16 +5,75 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2019-05-11T11:02:00-04:00</updated>
+  <updated>2019-05-16T19:20:00-07:00</updated>
   <author>
     <name>Blog Author</name>
   </author>
   <entry>
+    <title>Casting Rockets</title>
+    <link rel="alternate" href="http://blog.url.com/hcde598/2019/05/17/casting-rockets.html"/>
+    <id>http://blog.url.com/hcde598/2019/05/17/casting-rockets.html</id>
+    <published>2019-05-16T19:20:00-07:00</published>
+    <updated>2019-05-22T18:29:50-07:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;I made Saturn V rockets.&lt;/p&gt;
+
+&lt;h2 id="documentation"&gt;Documentation&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://www.thingiverse.com/thing:3416703"&gt;.stl model (sourced off Thingaverse)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=""&gt;Rhino mold&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="process"&gt;Process&lt;/h2&gt;
+
+&lt;p&gt;I started out first creating the mold model in Rhino with the intention of milling on machinable wax. When I was searching around, I found out that NASA has a lot of 3D models available already. I downloaded the Saturn V rocket, but realized that it was actually a model that contained all of the separate stages of the rocket. Instead of playing puzzle in three dimensions, I went to thingaverse and borrowed a 3D model of the Saturn V rocket.&lt;/p&gt;
+
+&lt;p&gt;In Rhino, I imported the rocket mesh and then created a box around it that was approximately the size of my piece of machineable wax, and then positioned the rocket so that half of it was submerged into the bottom of the box. I decided to create two halves of the rockets to speed up the amount of rockets I could cast.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment6/rhino.png" alt="Creating the mold in Rhino" /&gt;&lt;/p&gt;
+
+&lt;p&gt;I then exported the mold and opened it in Fusion 360 to create toolpaths. After creating a toolpath only using a 1/8 flat mill, I realized that I would not get the level of detail I wanted. I went back to Fusion 360 and added two more tools: a 1/16 &amp;amp; a 1/32. When I imported all three of these toolpaths into Bantam Tools, it estimated it would take 9 hours to complete. Not cool.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment6/bantam-tools.png" alt="All three toolpaths in Bantam" /&gt;&lt;/p&gt;
+
+&lt;p&gt;I decided quickly to not even attempt milling on machinable wax. I then modified my mold model in Rhino to decrease the printed material on the bottom of the box so that it would print quicker. When I imported the model into the Dremel tool, it estimated roughly 3 hours. Much better. I used similar settings to my last print: Medium Quality at 0.2mm and 20% infill.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment6/3D-print.png" alt="Model in Dremel Tools" /&gt;&lt;/p&gt;
+
+&lt;p&gt;I then sent my gcode file to the Dremel printers at the MILL with 230° filament and 55° plate settings. It printed great in about three hours.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment6/IMG_2629.JPG" alt="3D printing" /&gt;
+&lt;img src="/hcde598/images/assignment6/IMG_2630.JPG" alt="3D print mold" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Back home, I mixed equal parts of both liquids to make the Oomoo mold. Originally I was thinking, oh great, since I have two sides, I might be able to put them together to make a two part mold. Unfortunately, the Ooomoo wasn't quite precise when drying, even though the 3d print looked much more precise. I decided at that point to not attempt to create a sprue on these molds and just stick with flat rockets which would look great on a tabletop.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment6/IMG_2638.JPG" alt="Setting the mold" /&gt;&lt;/p&gt;
+
+&lt;p&gt;I used a small, very dull paring knife to carefully pull my mold out. Part of one mold didn't quite set completely on one of the engines, but it actually didn't end up mattering when I went to cast.&lt;/p&gt;
+
+&lt;p&gt;I mixed 3 parts plaster to 1 part water and filled my molds.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment6/IMG_2640.JPG" alt="Filled molds" /&gt;&lt;/p&gt;
+
+&lt;p&gt;It took some thought to know how to seperate the dried plaster from the mold without breaking the plaster. I figured out that pulling the mold apart on the sides of the rocket first and then the top and bottom helped get them out the best.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment6/IMG_2662.JPG" alt="Plaster Saturn V" /&gt;
+&lt;img src="/hcde598/images/assignment6/IMG_2679.JPG" alt="Multiples" /&gt;&lt;/p&gt;
+
+&lt;h2 id="reflection"&gt;Reflection&lt;/h2&gt;
+
+&lt;p&gt;To make the model even more smooth, I probably would sand down the rocket inside the model. I'd also want to print one rocket much larger to make setting the plaster and getting it out of the mold easier.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
     <title>CNC Milled Box</title>
     <link rel="alternate" href="http://blog.url.com/hcde598/2019/05/11/cnc-milled-box.html"/>
     <id>http://blog.url.com/hcde598/2019/05/11/cnc-milled-box.html</id>
-    <published>2019-05-11T11:02:00-04:00</published>
-    <updated>2019-05-11T11:34:14-04:00</updated>
+    <published>2019-05-11T08:02:00-07:00</published>
+    <updated>2019-05-22T18:29:29-07:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -27,16 +86,16 @@
 &lt;h3 id="rhino--illustrator"&gt;Rhino &amp;amp; Illustrator&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href="cnc-box.3dm"&gt;Rhino&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="cnc-box.Ai"&gt;Illustrator&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/hcde598/documentation/cnc-box/cnc-box.3dm"&gt;Rhino&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/hcde598/documentation/cnc-box/cnc-box.Ai"&gt;Illustrator&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id="bantam-tools"&gt;Bantam Tools&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href="side-long-2.btm"&gt;Long Sides with Tab Cutouts and Grooves&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="side-short-2.btm"&gt;Short Sides with Tabs and Grooves&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="topbottom.btm"&gt;Top and Bottom&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/hcde598/documentation/cnc-box/side-long-2.btm"&gt;Long Sides with Tab Cutouts and Grooves&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/hcde598/documentation/cnc-box/side-short-2.btm"&gt;Short Sides with Tabs and Grooves&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/hcde598/documentation/cnc-box/topbottom.btm"&gt;Top and Bottom&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id="making-the-shapes"&gt;Making the shapes&lt;/h2&gt;
@@ -79,8 +138,8 @@
     <title>Gear Assembly</title>
     <link rel="alternate" href="http://blog.url.com/hcde598/2019/05/05/gear-assembly.html"/>
     <id>http://blog.url.com/hcde598/2019/05/05/gear-assembly.html</id>
-    <published>2019-05-05T16:48:00-04:00</published>
-    <updated>2019-05-11T11:32:15-04:00</updated>
+    <published>2019-05-05T13:48:00-07:00</published>
+    <updated>2019-05-16T19:19:42-07:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -178,8 +237,8 @@
     <title>3D + Lasercut Lamp</title>
     <link rel="alternate" href="http://blog.url.com/hcde598/2019/04/27/lamp.html"/>
     <id>http://blog.url.com/hcde598/2019/04/27/lamp.html</id>
-    <published>2019-04-26T21:02:00-04:00</published>
-    <updated>2019-05-11T11:32:15-04:00</updated>
+    <published>2019-04-26T18:02:00-07:00</published>
+    <updated>2019-05-16T19:19:42-07:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -287,8 +346,8 @@ I had created other versions of this that staggered the spokes in a spiral up th
     <title>Parametric Kit</title>
     <link rel="alternate" href="http://blog.url.com/hcde598/2019/04/23/parametric-kit.html"/>
     <id>http://blog.url.com/hcde598/2019/04/23/parametric-kit.html</id>
-    <published>2019-04-22T22:26:00-04:00</published>
-    <updated>2019-05-11T11:32:15-04:00</updated>
+    <published>2019-04-22T19:26:00-07:00</published>
+    <updated>2019-05-16T19:19:42-07:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -457,8 +516,8 @@ I had created other versions of this that staggered the spokes in a spiral up th
     <title>Laser Cut Kit</title>
     <link rel="alternate" href="http://blog.url.com/hcde598/2019/04/16/laser-cut-kit.html"/>
     <id>http://blog.url.com/hcde598/2019/04/16/laser-cut-kit.html</id>
-    <published>2019-04-16T02:11:00-04:00</published>
-    <updated>2019-05-11T11:32:15-04:00</updated>
+    <published>2019-04-15T23:11:00-07:00</published>
+    <updated>2019-05-16T19:19:42-07:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -526,22 +585,6 @@ I had created other versions of this that staggered the spokes in a spiral up th
 &lt;p&gt;Choose your leaves. To achieve optimum plant growth, choose taller leaves for the center and smaller leaves on the outside. Place next to a real snake plant to keep it company.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="/hcde598/images/assignment1/laser-4.jpg" alt="Top down view of the leaves" /&gt;&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Nameboard</title>
-    <link rel="alternate" href="http://blog.url.com/hcde598/2019/04/04/nameboard.html"/>
-    <id>http://blog.url.com/hcde598/2019/04/04/nameboard.html</id>
-    <published>2019-04-03T23:19:00-04:00</published>
-    <updated>2019-05-11T11:32:15-04:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;For the first assignment, I decided to build a stand for a nametag I received while attending &lt;a href="https://greenvillegrok.com/"&gt;Greenville Grok&lt;/a&gt;, an unconference for people who create things online. I attended this conference on April 5th &amp;amp; 6th and had to fly across the country to Greenville, SC. This limited the time I was able to spend actually making something and also limited the tools and materials available to me.&lt;/p&gt;
-
-&lt;p&gt;We were given 5 1/4-inch floppy disks as our nametags. I built a stand out of legos since that's what I had available to me at my boyfriend's place. If I had been home for a significant time, I probably would've created something out of wood using my Dremel. The Chewbacca minifig is a special addition, as it has been to space (above the Karman line) on the payload of the most recent &lt;a href="https://www.blueorigin.com/new-shepard/"&gt;Blue Origin New Shepard&lt;/a&gt; mission.&lt;/p&gt;
-
-&lt;p&gt;Since nametags were on 5 1⁄4-inch floppy disks, it made me recall the history presented to us in our first class. Like all the inventions that led us to modern fabrication with digital tools, our modern internet technologies have evolved from the storage popular in the 70s and early 80s. Some of those early digital fabrication files were probably saved on a floppy just like this. Moving forward, I think it's important to recognize the achievements of the past, what we can learn from their discoveries, and what we still have yet to learn while building new things.&lt;/p&gt;
 </content>
   </entry>
 </feed>
