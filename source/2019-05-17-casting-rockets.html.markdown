@@ -10,7 +10,13 @@ I made Saturn V rockets.
 ## Documentation
 
 - [.stl model (sourced off Thingaverse)](https://www.thingiverse.com/thing:3416703)
-- [Rhino mold]()
+- [Rhino mold](/hcde598/documentation/casting/saturnv-mold.3dm)
+- [Stl mold](/hcde598/documentation/casting/saturnv-mold-2.stl)
+- [Gcode](/hcde598/documentation/casting/D3_saturnv-mold-3d.gcode)
+
+### Unused documentation
+
+- [Fusion 360](/hcde598/documentation/casting/saturnv-mold.f3d)
 
 ## Process
 
