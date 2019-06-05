@@ -5,16 +5,257 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2019-05-16T19:20:00-07:00</updated>
+  <updated>2019-06-05T08:20:00-07:00</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>Final Project</title>
+    <link rel="alternate" href="http://blog.url.com/hcde598/2019/06/05/final-project.html"/>
+    <id>http://blog.url.com/hcde598/2019/06/05/final-project.html</id>
+    <published>2019-06-05T08:20:00-07:00</published>
+    <updated>2019-06-05T14:55:41-07:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;img src="/hcde598/images/assignment7/final.gif" alt="Testing out the cam on the servo" /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Final piece&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id="concept"&gt;Concept&lt;/h1&gt;
+
+&lt;p&gt;A shadowbox art piece that captures the sky over the Olympic Mountains. For reference: here is an image of sunrise over the Olympic Mountains from Capitol Hill.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment7/sunrise.jpg" alt="Sunrise over the Olympics" /&gt;&lt;/p&gt;
+
+&lt;p&gt;I wanted to use leds and different color and translucencies of acrylic to create this effect, and also move mountains! The initial idea to put three sets of mountains on cam was because the colors of mountains were not easily created by shining leds through acrylic. They're different colors at different times of the day, so why not have different sets of ranges move to accomodate that.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment7/onshape-assembly.png" alt="OnShape Assembly" /&gt;
+&lt;em&gt;OnShape Assembly from Planning&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id="bill-of-materials"&gt;Bill of Materials&lt;/h1&gt;
+
+&lt;p&gt;To complete this project, I ended up using:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;3 24" x 12" sheets of translucent white acrylic&lt;/li&gt;
+  &lt;li&gt;1 24" x 12" sheet of black acrylic&lt;/li&gt;
+  &lt;li&gt;2 12" x 12" sheets of clear blue acrylic&lt;/li&gt;
+  &lt;li&gt;1 1/4" diameter wood dowel&lt;/li&gt;
+  &lt;li&gt;Gray PLA Filament&lt;/li&gt;
+  &lt;li&gt;1 8' x 6" poplar board&lt;/li&gt;
+  &lt;li&gt;5 36" x 3/4" straight dowels&lt;/li&gt;
+  &lt;li&gt;Nails &amp;amp; Nail gun&lt;/li&gt;
+  &lt;li&gt;Wood glue&lt;/li&gt;
+  &lt;li&gt;2 angle braces + 4 screws each&lt;/li&gt;
+  &lt;li&gt;1 individually addressable LED string&lt;/li&gt;
+  &lt;li&gt;1 Arduino Uno&lt;/li&gt;
+  &lt;li&gt;1 5V batter&lt;/li&gt;
+  &lt;li&gt;1 5V outlet to battery pack connector with on/off switch&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="original-bill-of-materials-from-project-planning"&gt;Original Bill of Materials from Project Planning:&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment7/bom.png" alt="Original Bill of Materials" /&gt;&lt;/p&gt;
+
+&lt;h1 id="file-creation"&gt;File creation&lt;/h1&gt;
+
+&lt;p&gt;How I created everything.&lt;/p&gt;
+
+&lt;h2 id="led-grid"&gt;1. LED Grid&lt;/h2&gt;
+
+&lt;p&gt;I started out from the back of the piece by creating the grid each LED would sit in by parametrically generating circles that were the diameter of the LEDs. I did this in case I needed to quickly change the diameter after doing a test run of laser cutting the acrylic to account for tolerance.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment7/grasshopper.png" alt="Grasshopper" /&gt;&lt;/p&gt;
+
+&lt;p&gt;I then baked the light cut outs and exported everything as a .dxf file to import it with all my laser cut pieces into Illustrator.&lt;/p&gt;
+
+&lt;h2 id="mountains-and-foreground"&gt;2. Mountains and Foreground&lt;/h2&gt;
+
+&lt;p&gt;To create the mountains, I imported a screencapture from the app PeakFinder on my phone into Illustrator. I then used the image trace feature to turn the screencapture into a vector and manually isolated the silhouette of the Olympic range.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment7/peakfinder-screenshot.jpg" alt="Peakfinder screenshot" /&gt;&lt;/p&gt;
+
+&lt;h2 id="cam-mechanism"&gt;3. Cam mechanism&lt;/h2&gt;
+
+&lt;p&gt;I created the Cam Mechanism in OnShape by importing the .dxf of the light grid and the mountain range I created in Illustrator. I then adjusted everything on an axel that was the size of the 1/4" wooden dowel I would use in the assembly to get the right shape. I exported the face of the cam as a .dxf to import into my laser cutting file in Illustrator.&lt;/p&gt;
+
+&lt;p&gt;In the same assembly, I created followers which would attach to the laser cut mountain rangers to give more stability as the cam rotated. I exported these as .stl files to import to Dremel's 3D printing software to print.&lt;/p&gt;
+
+&lt;p&gt;Additionally, I created an axel holder for the front of the mechanism which would be glued onto the back side of the foreground to provide proper placement for the cam mechanism.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment7/cams-onshape.png" alt="OnShape Assembly" /&gt;&lt;/p&gt;
+
+&lt;h2 id="leds"&gt;4. LEDs&lt;/h2&gt;
+
+&lt;p&gt;Even though I created a &lt;a href="https://github.com/kfrank/gitbit"&gt;program to create light sequences with LED strings&lt;/a&gt; in Arduino, I actually decided not to use it and opted for simpler code which would fade from blue to orange and then back. I mostly did this because I ran out of time at the end.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://forum.arduino.cc/index.php?topic=418923.msg2886563#msg2886563"&gt;Reference code used&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id="servo"&gt;Servo&lt;/h3&gt;
+
+&lt;p&gt;I ended up attaching the cam to the servo and did a test through the Arduino examples, but didn't actually end up hooking this up.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment7/cam.gif" alt="Testing out the cam on the servo" /&gt;&lt;/p&gt;
+
+&lt;h1 id="assembling"&gt;Assembling&lt;/h1&gt;
+
+&lt;p&gt;Laser cutting and 3D printing went pretty smoothly. I actually showed up before our second to last class at the MILL and printed everything while no one was there. Nothing caught on fire, and when I had all my pieces stand up to test how they would look, I was pretty happy with it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment7/testing-layers.JPG" alt="Visual Acrylic Layer test" /&gt;&lt;/p&gt;
+
+&lt;h2 id="laser-cutting"&gt;1. Laser cutting&lt;/h2&gt;
+
+&lt;p&gt;I used my old acrylic settings of 10 speed, 100 power, 50 frequency to cut.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment7/laser-cut-mountains.JPG" alt="Mountains" /&gt;&lt;/p&gt;
+
+&lt;h2 id="d-printing"&gt;2. 3D printing&lt;/h2&gt;
+
+&lt;p&gt;One of the printers I was using jammed halfway through printing the second cam, but we got it unstuck and started printing just fine again. Since I had some time, I pulled an arduino enclosure off of Thingaverse and printed the bottom of it so I could more easily connect my arduino the the back of the piece.&lt;/p&gt;
+
+&lt;h2 id="frame"&gt;3. Frame&lt;/h2&gt;
+
+&lt;p&gt;Now here's where things got tricky.&lt;/p&gt;
+
+&lt;p&gt;I moved last Friday.&lt;/p&gt;
+
+&lt;p&gt;All my stuff got packed up, I actually didn't lose anything from the this project, thankfully, but it was ALL OVER the place. There's still boxes everywhere in what will become my office.&lt;/p&gt;
+
+&lt;p&gt;My original plan was the go to the Fluke Makerspace on Friday evening to attend the woodshop and then miter cut my wood and cut grooves in it (hopefully with a table saw).&lt;/p&gt;
+
+&lt;p&gt;Since I moved Friday and had my life upended, I missed out by like half an hour because of traffic from my new place. Awesome.&lt;/p&gt;
+
+&lt;p&gt;My back up plan, however, was to visit the West Seattle Tool Library and rent a miter saw and a router to make the frame.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment7/tool-library.JPG" alt="Tool Library" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Of course, despite making a very cool guide for my router, I had way too many things nailed down and I still failed at getting stright grooves.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment7/failed-routing.JPG" alt="Failed routing" /&gt;&lt;/p&gt;
+
+&lt;p&gt;For my next attempt, I cut some grooves using my Dremel multi-tool in wood. They were grooves all right, but not straight, and definitely didn't fit any acrylic in place. That idea also got scraped.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment7/grooves.JPG" alt="Grooves" /&gt;&lt;/p&gt;
+
+&lt;p&gt;For the third attempt, I went back to Home Depot and picked up some more wood and straight dowels to use to create grooves. I figured I could use my nail gun and some wood glue to get the dowels in place to hold the acrylic. Except my miter saw was weird and I couldn't figure out how to change the angle of the blade since my wood was now 6", too tall to fit under the saw. I just made some straight cuts instead and moved on.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment7/grooves-take-2.JPG" alt="Third attempt" /&gt;
+&lt;img src="/hcde598/images/assignment7/testing-fit.JPG" alt="Testing straight dowels" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Yay, it finally worked.&lt;/p&gt;
+
+&lt;h2 id="post-process"&gt;4. Post-process&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment7/mirror-coating.JPG" alt="Spray painting the LED grid" /&gt;&lt;/p&gt;
+
+&lt;p&gt;While I was going crazy with the saw and some wood glue, I was waiting for some spray paint to dry on the LED side of my LED grid. This gives the acrylic a much more reflective surface to have the light bounce off of. Which I needed because I used really huge LEDs instead of being a smart person and just ordering new strings with small ones and using more of them.&lt;/p&gt;
+
+&lt;h2 id="putting-it-together"&gt;5. Putting it together&lt;/h2&gt;
+
+&lt;p&gt;Finally.&lt;/p&gt;
+
+&lt;p&gt;All the LEDs got popped into their individual holes in the grid.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment7/assembling-leds.JPG" alt="LEDs" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Each layer of acrylic got fit into the sides with the grooves and then the bottom was nailed on.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment7/layers.JPG" alt="Layers" /&gt;&lt;/p&gt;
+
+&lt;p&gt;This would've been great, but I ended up breaking my cam axel assembling everything. Since I couldn't find my dowels because of moving, I just decided to go with non-moving ranges and glued them into place at different heights to create a nice effect.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment7/cam-underneath.JPG" alt="Cams" /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment7/cam-servo-attachment.JPG" alt="Cam attachment" /&gt;&lt;/p&gt;
+
+&lt;p&gt;I threw up the NeoPixel test to see how it would look. Ok, the light goes through the acrylic, but again, since I wasn't being a sane person, the lights gave an abstract grid-y look instead of the fluid gradient look I was going for.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment7/testing-leds.JPG" alt="Testing out the leds" /&gt;&lt;/p&gt;
+
+&lt;p&gt;I nailed on the top instead and threw up a blue to orange color swipe with NeoPixel and called this prototype done. Even though it's not exactly what I was going for, I still think it looks cool.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/hcde598/images/assignment7/final5.JPG" alt="Testing out the leds" /&gt;
+&lt;img src="/hcde598/images/assignment7/final2.jpg" alt="Testing out the leds" /&gt;
+&lt;img src="/hcde598/images/assignment7/final1.JPG" alt="Testing out the leds" /&gt;&lt;/p&gt;
+
+&lt;h1 id="reflection"&gt;Reflection&lt;/h1&gt;
+
+&lt;h2 id="the-wood-frame"&gt;1. The wood frame&lt;/h2&gt;
+
+&lt;p&gt;Maybe this would've been easier if I would've been able to go to Fluke all along, but I wouldn't have done this the way I did. Improvising cost my hours worth of time I wasn't expecting.&lt;/p&gt;
+
+&lt;h2 id="cam-followers-longer"&gt;2. Cam followers longer&lt;/h2&gt;
+
+&lt;p&gt;When I tested the cam mechanism, the mountains lifted and lowered, but weren't exactly uniformly horizontal. I would've definitely made the followers longer.&lt;/p&gt;
+
+&lt;h2 id="small-led-strip"&gt;3. Small LED strip&lt;/h2&gt;
+
+&lt;p&gt;Using smaller LED strips would've made the gradient animation much more subtle and give the effect I was going for.&lt;/p&gt;
+
+&lt;h2 id="experiment-with-led-lighting-from-bottom-on-acrylic"&gt;4. Experiment with LED lighting from bottom on acrylic&lt;/h2&gt;
+
+&lt;p&gt;I also came across this method in my research, but wanted to do something different. This technique would've been great to experiment with.&lt;/p&gt;
+
+&lt;h2 id="source-files"&gt;Source Files&lt;/h2&gt;
+
+&lt;h3 id="onshape"&gt;OnShape&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://cad.onshape.com/documents/a8e1af7107f956e7db86eb20/w/049e752049c02e10ec8a1439/e/26cb20b70adedc1d48e5dbd8"&gt;Onshape Assembly &amp;amp; Modeling&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="grasshoppercad"&gt;Grasshopper/CAD&lt;/h3&gt;
+
+&lt;p&gt;LED Grid&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="/hcde598/documentation/final/working-files/light-grid.gh"&gt;Parametric LED grid – Grasshopper&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/hcde598/documentation/final/working-files/light-grid.3dm"&gt;Parametric LED grid – Rhino&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Mountain Ranges&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="/hcde598/documentation/final/mountain-black.ai"&gt;Mountains&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="laser-cutting-files"&gt;Laser cutting files&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="/hcde598/documentation/final/LASER_CUT.ai"&gt;Illustrator&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Light Grid
+&lt;a href="/hcde598/documentation/final/exports/01-light-grid.dxf"&gt;.dxf&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Cam
+&lt;a href="/hcde598/documentation/final/exports/3-Cam.dxf"&gt;.dxf&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Mountain Ranges
+&lt;a href="/hcde598/documentation/final/exports/3-mountains.dxf"&gt;.dxf&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Foreground
+&lt;a href="/hcde598/documentation/final/exports/foreground.dxf"&gt;.dxf&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id="d-model-files"&gt;3D model files&lt;/h3&gt;
+
+&lt;p&gt;Axel Holder
+&lt;a href="/hcde598/documentation/final/D3_axel-holder.gcode"&gt;.gcode&lt;/a&gt;
+&lt;a href="/hcde598/documentation/final/exports/axel-holder.stl"&gt;.stl&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Follower
+&lt;a href="/hcde598/documentation/final/D3_PRINT.gcode"&gt;.gcode&lt;/a&gt;
+&lt;a href="/hcde598/documentation/final/exports/3-follower.stl"&gt;.stl&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Arduino Enclosure
+&lt;a href="https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=8&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;ved=2ahUKEwj14Z2PqtPiAhXEGTQIHZ8-D7UQFjAHegQIBxAB&amp;amp;url=https%3A%2F%2Fwww.thingiverse.com%2Fthing%3A628929&amp;amp;usg=AOvVaw0RH_-KixUyVANXXO82UBWg"&gt;via Thingiverse&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Casting Rockets</title>
     <link rel="alternate" href="http://blog.url.com/hcde598/2019/05/17/casting-rockets.html"/>
     <id>http://blog.url.com/hcde598/2019/05/17/casting-rockets.html</id>
     <published>2019-05-16T19:20:00-07:00</published>
-    <updated>2019-05-22T18:37:19-07:00</updated>
+    <updated>2019-05-26T10:32:22-07:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -81,7 +322,7 @@
     <link rel="alternate" href="http://blog.url.com/hcde598/2019/05/11/cnc-milled-box.html"/>
     <id>http://blog.url.com/hcde598/2019/05/11/cnc-milled-box.html</id>
     <published>2019-05-11T08:02:00-07:00</published>
-    <updated>2019-05-22T18:33:58-07:00</updated>
+    <updated>2019-05-26T10:32:22-07:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -147,7 +388,7 @@
     <link rel="alternate" href="http://blog.url.com/hcde598/2019/05/05/gear-assembly.html"/>
     <id>http://blog.url.com/hcde598/2019/05/05/gear-assembly.html</id>
     <published>2019-05-05T13:48:00-07:00</published>
-    <updated>2019-05-22T18:33:58-07:00</updated>
+    <updated>2019-05-26T10:32:22-07:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -246,7 +487,7 @@
     <link rel="alternate" href="http://blog.url.com/hcde598/2019/04/27/lamp.html"/>
     <id>http://blog.url.com/hcde598/2019/04/27/lamp.html</id>
     <published>2019-04-26T18:02:00-07:00</published>
-    <updated>2019-05-22T18:33:58-07:00</updated>
+    <updated>2019-05-26T10:32:22-07:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -355,7 +596,7 @@ I had created other versions of this that staggered the spokes in a spiral up th
     <link rel="alternate" href="http://blog.url.com/hcde598/2019/04/23/parametric-kit.html"/>
     <id>http://blog.url.com/hcde598/2019/04/23/parametric-kit.html</id>
     <published>2019-04-22T19:26:00-07:00</published>
-    <updated>2019-05-22T18:33:58-07:00</updated>
+    <updated>2019-05-26T10:32:22-07:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -518,81 +759,6 @@ I had created other versions of this that staggered the spokes in a spiral up th
   &lt;li&gt;Masking the clear acrylic&lt;/li&gt;
   &lt;li&gt;Not spending so many damn hours in Grasshopper trying to get it to generate everything.&lt;/li&gt;
 &lt;/ol&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Laser Cut Kit</title>
-    <link rel="alternate" href="http://blog.url.com/hcde598/2019/04/16/laser-cut-kit.html"/>
-    <id>http://blog.url.com/hcde598/2019/04/16/laser-cut-kit.html</id>
-    <published>2019-04-15T23:11:00-07:00</published>
-    <updated>2019-05-22T18:33:58-07:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;h1 id="house-plant--planter-construction-kit"&gt;House Plant &amp;amp; Planter Construction Kit&lt;/h1&gt;
-
-&lt;p&gt;Want to get in on the house plant trend but kill even a snake plant? Why not laser cut one? Guaranteed never to die since it’s made out of cardboard. You’ll never run the risk of forgetting to water it!&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;(Just don’t water it. Cardboard is not a living thing and doesn’t need water for nutrients.)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="http://klare.io/hcde598/documentation/laser-cut-kit/planter.ai"&gt;Download the source illustrator files&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id="designing-the-planter"&gt;Designing the planter&lt;/h2&gt;
-
-&lt;p&gt;I wanted a planter shape that turned 2D cardboard into a 3D cylindrical shape since it's more of a challenge than changing 2D objects, like cardboard, into a cube with 90° angles. To start, I browsed planters on CB2 for inspiration. At first, I thought about creating a grid with angled notches to fit squares into a cylinder, like in the below image. This &lt;em&gt;may&lt;/em&gt; have worked, but seemed like it would be tricky to make solid and would've required a lot of angle calculations and physical testing. Cool concept, but not feasible for me given the time frame for this project.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/hcde598/images/assignment1/cb2-planter.png" alt="Two ombre planters with square design" /&gt;
-&lt;em&gt;&lt;a href="https://www.cb2.com/pescador-ombre-planters/f19685"&gt;Pescador Ombre Planters on CB2&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Instead, I turned to thinking about using vertical pieces taking a cross-section of the radius of a planter. By placing these on an angle these pieces could visually cover the shape of a planter, retain the integrity of a cylindrical planter shape, and not require lots of intricate connects thus making the structure much more solid. I designed the planter with twelve pieces to fit on 30° intervals around planter circumference.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/hcde598/images/assignment1/laser-1.jpg" alt="Vertical cross-section pieces" /&gt;&lt;/p&gt;
-
-&lt;p&gt;To fit the vertical cross-section pieces together, I designed the planter with two circles 7" wide in diameter to place at the top and bottom of the vertical pieces. These act as the top and bottom of the planter.&lt;/p&gt;
-
-&lt;p&gt;To achieve a more solid-looking visual effect, I aligned two notches which were 1/2 inch deep and 0.17 wide (to match the thickness of the cardboard I used) to the top and bottom of the circle. I then rotated these notches 340° and aligned the outward corner of the notch closest to the circle with the edge of the circle. I repeated this step for the remaining 10 notches, placed 30° apart to match the 12 vertical pieces.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/hcde598/images/assignment1/laser-4.gif" alt="Adding the notches for the circles" /&gt;
-&lt;em&gt;Videos and gifs at 4x speed&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;I then wanted to make sure that all the pieces were aligned on a z-axis in anticipation of these circular pieces not being completely level by user construction only. I added 1/2 inch deep by 0.17 wide notches to the top and bottom of the vertical planter-profile pieces to align with the notches on the top and bottom circular pieces. When these two notches get locked in place together, the circular pieces should stay level.&lt;/p&gt;
-
-&lt;h2 id="building-the-plant"&gt;Building the plant&lt;/h2&gt;
-
-&lt;p&gt;To create something nice to sit in the planter, I turned to snake plants. These are tall and the visual effect of their leaves can roughly be achieved in a 2D plane, which is why they were chosen. I created 10 different leaf varieties to mimic the shape of snake plant leaves and increased the height of the leaves incrementally by a 1/2 inch for each leaf from 2" all the way up to 8".&lt;/p&gt;
-
-&lt;p&gt;I then added a long "popsicle stick" at the bottom of the leaf to act as a root through the top circle and through the pot. To stabilize this further, I added a third circle and adjusted the vertical pieces to add an additional identical notch 2" below the top notch. This gives each of the leaf "roots" something to sit in like a nice bed of dirt.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/hcde598/images/assignment1/laser-5.gif" alt="Making the leaves in illustrator with paths" /&gt;&lt;/p&gt;
-
-&lt;p&gt;I then choose one circle to act as the top of the plant and drew rectangular cut-outs in a spiral pattern to mimic natural plant growth. These were by .625" by .17" wide (the magic cardboard thickness number). These will be where the popsicle sticks part of the leaves will drop into the planter.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/hcde598/images/assignment1/illustrator-spiral.jpg" alt="Using the illustrator spiral tool as a guide for notches" /&gt;&lt;/p&gt;
-
-&lt;h2 id="laser-cutting-everything"&gt;Laser cutting everything&lt;/h2&gt;
-
-&lt;p&gt;I assembled four artboards sized to cardboard I had pre-sized from a large Lego box and laid out each object to fit. I set the laser cutter to 25% power 100% speed and each object to a stroke width of .001pt. This worked well enough to properly cut out everything, though there was some funky smelling carboard smoke (which you can see in the gifs).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/hcde598/images/assignment1/laser-1.gif" alt="Cutting out the planter circles" /&gt;
-&lt;em&gt;Cutting one of the artboards with the circular pieces&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;I ran into an issue where the vertical pieces, even though the stroke was set to the smallest setting, still wanted to be raster cut by the laser cutter instead of vector cut. I had to re-draw this shape using one of the leaves I knew had already laser cut as vector.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/hcde598/images/assignment1/laser-2.gif" alt="Cutting out the leaves" /&gt;&lt;/p&gt;
-
-&lt;h2 id="modifications"&gt;Modifications&lt;/h2&gt;
-
-&lt;p&gt;I originally designed each vertical piece with only one notch and removed every third notch from the circular pieces to fit the two together (which you can see in the laser cutting gifs). While this worked to solidly piece the two types of pieces together, it did not strictly adhere to the assignment criteria. Instead, I went back and editing all the vertical pieces to have all three notches, this time half as wide and also edited the circles to have notches half as wide at every 30°. This technique still allows a solid connection between the two types while adhering to the criteria of having 12 instances of one unique part (in this case, the 12 vertical planter-profile pieces). This is reflected in the &lt;a href="http://klare.io/hcde598/documentation/laser-cut-kit/planter.ai"&gt;source illustrator file&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id="assembling-the-final-plant"&gt;Assembling the final plant&lt;/h2&gt;
-
-&lt;p&gt;To assemble the plant, first, put together the planter. Take one vertical profile piece and slide it into the slots on the three circles with the circle with rectangular cut-outs at the top. Do the same on the opposite side. Then, fill in with vertical pieces around all sides of the circles.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/hcde598/images/assignment1/laser-2.jpg" alt="Putting together the planter" /&gt;&lt;/p&gt;
-
-&lt;p&gt;Choose your leaves. To achieve optimum plant growth, choose taller leaves for the center and smaller leaves on the outside. Place next to a real snake plant to keep it company.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/hcde598/images/assignment1/laser-4.jpg" alt="Top down view of the leaves" /&gt;&lt;/p&gt;
 </content>
   </entry>
 </feed>

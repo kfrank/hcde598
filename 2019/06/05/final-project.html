@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Final Project</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,700|Spectral:400,700"
+      rel="stylesheet"
+    />
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+    <link href="/hcde598/stylesheets/site.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="ph4 pt4 pb2 flex-ns justify-between-ns">
+      <nav>
+        <h1 class="mt0 db dib-ns"><a href="/">Klare Frank</a></h1>
+        <h2 class="mt0 ml2-ns db dib-ns">HCDE 598 Digital Fabrication</h2>
+      </nav>
+      <nav>
+        <a href="mailto:klare@uw.edu" class="link mt0 mt2-ns dib sans-serif b f5">klare@uw.edu</a>
+      </nav>
+    </header>
+    
+<div id="main" role="main" class="assignment">
+  <header class="ph4 pv4 pv0-ns mv4 mv0-ns">
+    <div
+      class="flex-m items-center-m justify-between-m flex-l items-center-l justify-between-l mw8 center"
+    >
+      <div class=" z-1 relative header-content">
+        <h1 class="mt2 mb0 f0-ns f1 lh-solid db">
+          Final Project
+        </h1>
+        <time datetime="" class="dib mt0 f4-ns f5 mb3 sans-serif fw3"
+          >June 05 2019</time
+        >
+      </div>
+      <figure class="mh0 mv2 mt3 z-1 relative">
+        <img src="/hcde598/images/assignment7/final4.jpg" alt="Final Project" />
+      </figure>
+    </div>
+    <div class="bg"></div>
+  </header>
+
+  <div class="mw7 center ph4 ">
+    <article class="mt4 lh-copy">
+      <div class="mw7">
+        <p><img src="/hcde598/images/assignment7/final.gif" alt="Testing out the cam on the servo" /></p>
+
+<p><em>Final piece</em></p>
+
+<h1 id="concept">Concept</h1>
+
+<p>A shadowbox art piece that captures the sky over the Olympic Mountains. For reference: here is an image of sunrise over the Olympic Mountains from Capitol Hill.</p>
+
+<p><img src="/hcde598/images/assignment7/sunrise.jpg" alt="Sunrise over the Olympics" /></p>
+
+<p>I wanted to use leds and different color and translucencies of acrylic to create this effect, and also move mountains! The initial idea to put three sets of mountains on cam was because the colors of mountains were not easily created by shining leds through acrylic. They're different colors at different times of the day, so why not have different sets of ranges move to accomodate that.</p>
+
+<p><img src="/hcde598/images/assignment7/onshape-assembly.png" alt="OnShape Assembly" />
+<em>OnShape Assembly from Planning</em></p>
+
+<h1 id="bill-of-materials">Bill of Materials</h1>
+
+<p>To complete this project, I ended up using:</p>
+
+<ul>
+  <li>3 24" x 12" sheets of translucent white acrylic</li>
+  <li>1 24" x 12" sheet of black acrylic</li>
+  <li>2 12" x 12" sheets of clear blue acrylic</li>
+  <li>1 1/4" diameter wood dowel</li>
+  <li>Gray PLA Filament</li>
+  <li>1 8' x 6" poplar board</li>
+  <li>5 36" x 3/4" straight dowels</li>
+  <li>Nails &amp; Nail gun</li>
+  <li>Wood glue</li>
+  <li>2 angle braces + 4 screws each</li>
+  <li>1 individually addressable LED string</li>
+  <li>1 Arduino Uno</li>
+  <li>1 5V batter</li>
+  <li>1 5V outlet to battery pack connector with on/off switch</li>
+</ul>
+
+<h3 id="original-bill-of-materials-from-project-planning">Original Bill of Materials from Project Planning:</h3>
+
+<p><img src="/hcde598/images/assignment7/bom.png" alt="Original Bill of Materials" /></p>
+
+<h1 id="file-creation">File creation</h1>
+
+<p>How I created everything.</p>
+
+<h2 id="led-grid">1. LED Grid</h2>
+
+<p>I started out from the back of the piece by creating the grid each LED would sit in by parametrically generating circles that were the diameter of the LEDs. I did this in case I needed to quickly change the diameter after doing a test run of laser cutting the acrylic to account for tolerance.</p>
+
+<p><img src="/hcde598/images/assignment7/grasshopper.png" alt="Grasshopper" /></p>
+
+<p>I then baked the light cut outs and exported everything as a .dxf file to import it with all my laser cut pieces into Illustrator.</p>
+
+<h2 id="mountains-and-foreground">2. Mountains and Foreground</h2>
+
+<p>To create the mountains, I imported a screencapture from the app PeakFinder on my phone into Illustrator. I then used the image trace feature to turn the screencapture into a vector and manually isolated the silhouette of the Olympic range.</p>
+
+<p><img src="/hcde598/images/assignment7/peakfinder-screenshot.jpg" alt="Peakfinder screenshot" /></p>
+
+<h2 id="cam-mechanism">3. Cam mechanism</h2>
+
+<p>I created the Cam Mechanism in OnShape by importing the .dxf of the light grid and the mountain range I created in Illustrator. I then adjusted everything on an axel that was the size of the 1/4" wooden dowel I would use in the assembly to get the right shape. I exported the face of the cam as a .dxf to import into my laser cutting file in Illustrator.</p>
+
+<p>In the same assembly, I created followers which would attach to the laser cut mountain rangers to give more stability as the cam rotated. I exported these as .stl files to import to Dremel's 3D printing software to print.</p>
+
+<p>Additionally, I created an axel holder for the front of the mechanism which would be glued onto the back side of the foreground to provide proper placement for the cam mechanism.</p>
+
+<p><img src="/hcde598/images/assignment7/cams-onshape.png" alt="OnShape Assembly" /></p>
+
+<h2 id="leds">4. LEDs</h2>
+
+<p>Even though I created a <a href="https://github.com/kfrank/gitbit">program to create light sequences with LED strings</a> in Arduino, I actually decided not to use it and opted for simpler code which would fade from blue to orange and then back. I mostly did this because I ran out of time at the end.</p>
+
+<p><a href="https://forum.arduino.cc/index.php?topic=418923.msg2886563#msg2886563">Reference code used</a></p>
+
+<h3 id="servo">Servo</h3>
+
+<p>I ended up attaching the cam to the servo and did a test through the Arduino examples, but didn't actually end up hooking this up.</p>
+
+<p><img src="/hcde598/images/assignment7/cam.gif" alt="Testing out the cam on the servo" /></p>
+
+<h1 id="assembling">Assembling</h1>
+
+<p>Laser cutting and 3D printing went pretty smoothly. I actually showed up before our second to last class at the MILL and printed everything while no one was there. Nothing caught on fire, and when I had all my pieces stand up to test how they would look, I was pretty happy with it.</p>
+
+<p><img src="/hcde598/images/assignment7/testing-layers.JPG" alt="Visual Acrylic Layer test" /></p>
+
+<h2 id="laser-cutting">1. Laser cutting</h2>
+
+<p>I used my old acrylic settings of 10 speed, 100 power, 50 frequency to cut.</p>
+
+<p><img src="/hcde598/images/assignment7/laser-cut-mountains.JPG" alt="Mountains" /></p>
+
+<h2 id="d-printing">2. 3D printing</h2>
+
+<p>One of the printers I was using jammed halfway through printing the second cam, but we got it unstuck and started printing just fine again. Since I had some time, I pulled an arduino enclosure off of Thingaverse and printed the bottom of it so I could more easily connect my arduino the the back of the piece.</p>
+
+<h2 id="frame">3. Frame</h2>
+
+<p>Now here's where things got tricky.</p>
+
+<p>I moved last Friday.</p>
+
+<p>All my stuff got packed up, I actually didn't lose anything from the this project, thankfully, but it was ALL OVER the place. There's still boxes everywhere in what will become my office.</p>
+
+<p>My original plan was the go to the Fluke Makerspace on Friday evening to attend the woodshop and then miter cut my wood and cut grooves in it (hopefully with a table saw).</p>
+
+<p>Since I moved Friday and had my life upended, I missed out by like half an hour because of traffic from my new place. Awesome.</p>
+
+<p>My back up plan, however, was to visit the West Seattle Tool Library and rent a miter saw and a router to make the frame.</p>
+
+<p><img src="/hcde598/images/assignment7/tool-library.JPG" alt="Tool Library" /></p>
+
+<p>Of course, despite making a very cool guide for my router, I had way too many things nailed down and I still failed at getting stright grooves.</p>
+
+<p><img src="/hcde598/images/assignment7/failed-routing.JPG" alt="Failed routing" /></p>
+
+<p>For my next attempt, I cut some grooves using my Dremel multi-tool in wood. They were grooves all right, but not straight, and definitely didn't fit any acrylic in place. That idea also got scraped.</p>
+
+<p><img src="/hcde598/images/assignment7/grooves.JPG" alt="Grooves" /></p>
+
+<p>For the third attempt, I went back to Home Depot and picked up some more wood and straight dowels to use to create grooves. I figured I could use my nail gun and some wood glue to get the dowels in place to hold the acrylic. Except my miter saw was weird and I couldn't figure out how to change the angle of the blade since my wood was now 6", too tall to fit under the saw. I just made some straight cuts instead and moved on.</p>
+
+<p><img src="/hcde598/images/assignment7/grooves-take-2.JPG" alt="Third attempt" />
+<img src="/hcde598/images/assignment7/testing-fit.JPG" alt="Testing straight dowels" /></p>
+
+<p>Yay, it finally worked.</p>
+
+<h2 id="post-process">4. Post-process</h2>
+
+<p><img src="/hcde598/images/assignment7/mirror-coating.JPG" alt="Spray painting the LED grid" /></p>
+
+<p>While I was going crazy with the saw and some wood glue, I was waiting for some spray paint to dry on the LED side of my LED grid. This gives the acrylic a much more reflective surface to have the light bounce off of. Which I needed because I used really huge LEDs instead of being a smart person and just ordering new strings with small ones and using more of them.</p>
+
+<h2 id="putting-it-together">5. Putting it together</h2>
+
+<p>Finally.</p>
+
+<p>All the LEDs got popped into their individual holes in the grid.</p>
+
+<p><img src="/hcde598/images/assignment7/assembling-leds.JPG" alt="LEDs" /></p>
+
+<p>Each layer of acrylic got fit into the sides with the grooves and then the bottom was nailed on.</p>
+
+<p><img src="/hcde598/images/assignment7/layers.JPG" alt="Layers" /></p>
+
+<p>This would've been great, but I ended up breaking my cam axel assembling everything. Since I couldn't find my dowels because of moving, I just decided to go with non-moving ranges and glued them into place at different heights to create a nice effect.</p>
+
+<p><img src="/hcde598/images/assignment7/cam-underneath.JPG" alt="Cams" /></p>
+
+<p><img src="/hcde598/images/assignment7/cam-servo-attachment.JPG" alt="Cam attachment" /></p>
+
+<p>I threw up the NeoPixel test to see how it would look. Ok, the light goes through the acrylic, but again, since I wasn't being a sane person, the lights gave an abstract grid-y look instead of the fluid gradient look I was going for.</p>
+
+<p><img src="/hcde598/images/assignment7/testing-leds.JPG" alt="Testing out the leds" /></p>
+
+<p>I nailed on the top instead and threw up a blue to orange color swipe with NeoPixel and called this prototype done. Even though it's not exactly what I was going for, I still think it looks cool.</p>
+
+<p><img src="/hcde598/images/assignment7/final5.JPG" alt="Testing out the leds" />
+<img src="/hcde598/images/assignment7/final2.jpg" alt="Testing out the leds" />
+<img src="/hcde598/images/assignment7/final1.JPG" alt="Testing out the leds" /></p>
+
+<h1 id="reflection">Reflection</h1>
+
+<h2 id="the-wood-frame">1. The wood frame</h2>
+
+<p>Maybe this would've been easier if I would've been able to go to Fluke all along, but I wouldn't have done this the way I did. Improvising cost my hours worth of time I wasn't expecting.</p>
+
+<h2 id="cam-followers-longer">2. Cam followers longer</h2>
+
+<p>When I tested the cam mechanism, the mountains lifted and lowered, but weren't exactly uniformly horizontal. I would've definitely made the followers longer.</p>
+
+<h2 id="small-led-strip">3. Small LED strip</h2>
+
+<p>Using smaller LED strips would've made the gradient animation much more subtle and give the effect I was going for.</p>
+
+<h2 id="experiment-with-led-lighting-from-bottom-on-acrylic">4. Experiment with LED lighting from bottom on acrylic</h2>
+
+<p>I also came across this method in my research, but wanted to do something different. This technique would've been great to experiment with.</p>
+
+<h2 id="source-files">Source Files</h2>
+
+<h3 id="onshape">OnShape</h3>
+
+<ul>
+  <li><a href="https://cad.onshape.com/documents/a8e1af7107f956e7db86eb20/w/049e752049c02e10ec8a1439/e/26cb20b70adedc1d48e5dbd8">Onshape Assembly &amp; Modeling</a></li>
+</ul>
+
+<h3 id="grasshoppercad">Grasshopper/CAD</h3>
+
+<p>LED Grid</p>
+
+<ul>
+  <li><a href="/hcde598/documentation/final/working-files/light-grid.gh">Parametric LED grid – Grasshopper</a></li>
+  <li><a href="/hcde598/documentation/final/working-files/light-grid.3dm">Parametric LED grid – Rhino</a></li>
+</ul>
+
+<p>Mountain Ranges</p>
+
+<ul>
+  <li><a href="/hcde598/documentation/final/mountain-black.ai">Mountains</a></li>
+</ul>
+
+<h3 id="laser-cutting-files">Laser cutting files</h3>
+
+<p><a href="/hcde598/documentation/final/LASER_CUT.ai">Illustrator</a></p>
+
+<p>Light Grid
+<a href="/hcde598/documentation/final/exports/01-light-grid.dxf">.dxf</a></p>
+
+<p>Cam
+<a href="/hcde598/documentation/final/exports/3-Cam.dxf">.dxf</a></p>
+
+<p>Mountain Ranges
+<a href="/hcde598/documentation/final/exports/3-mountains.dxf">.dxf</a></p>
+
+<p>Foreground
+<a href="/hcde598/documentation/final/exports/foreground.dxf">.dxf</a></p>
+
+<h3 id="d-model-files">3D model files</h3>
+
+<p>Axel Holder
+<a href="/hcde598/documentation/final/D3_axel-holder.gcode">.gcode</a>
+<a href="/hcde598/documentation/final/exports/axel-holder.stl">.stl</a></p>
+
+<p>Follower
+<a href="/hcde598/documentation/final/D3_PRINT.gcode">.gcode</a>
+<a href="/hcde598/documentation/final/exports/3-follower.stl">.stl</a></p>
+
+<p>Arduino Enclosure
+<a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=8&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwj14Z2PqtPiAhXEGTQIHZ8-D7UQFjAHegQIBxAB&amp;url=https%3A%2F%2Fwww.thingiverse.com%2Fthing%3A628929&amp;usg=AOvVaw0RH_-KixUyVANXXO82UBWg">via Thingiverse</a></p>
+
+      </div>
+    </article>
+  </div>
+</div>
+
+<aside class="mt4 ph4">
+  <div class="mw7 center">
+    <ul
+      class="flex-ns items-center justify-between list pl0 bt b--light-gray pt3"
+    >
+      <li>
+         
+        <p>
+          <span class="f5 db b sans-serif">Previous Post</span>
+          <a
+            href="/hcde598/2019/05/17/casting-rockets.html"
+            rel="prev"
+            title="Previous article: Casting Rockets"
+            class="sans-serif dib mt1"
+          >
+            Casting Rockets
+          </a>
+        </p>
+      </li>
+      <li class="tr-ns">
+               </li>
+    </ul>
+  </div>
+</aside>
+ 
+  </body>
+</html>
